@@ -1,0 +1,326 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 3.2rem;
+  z-index: 200;
+
+  @include small-tablet {
+    top: 2.4rem;
+  }
+
+  &.fixed-nav {
+    & .header__nav:before {
+      opacity: 1;
+    }
+  }
+
+  /* .header__inner */
+
+  &__inner {
+  }
+
+  /* .header__banner */
+
+  &__banner {
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 2.4rem;
+    border-radius: 3.2rem;
+    &:before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      border-radius: 3.2rem;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background: rgba(255, 255, 255, 0.2);
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    &.isNoBg {
+      position: relative;
+      z-index: 5;
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+
+  /* .header__logo-box */
+
+  &__logo-box {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    position: relative;
+    z-index: 5;
+    @include small-tablet {
+      gap: 2rem;
+    }
+    &.desktop {
+      @include small-tablet {
+        display: none;
+      }
+    }
+  }
+
+  /* .header__logo-img-box */
+
+  &__logo-img-box {
+    width: 4.4rem;
+    height: 4.4rem;
+    @include small-tablet {
+      width: 7.2rem;
+      height: 7.2rem;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* .header__logo-text-box */
+
+  &__logo-text-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .header__logo-title */
+
+  &__logo-title {
+    font-family: 'EuclidCircularA';
+    font-weight: 600;
+    font-size: 2rem;
+    @include small-tablet {
+      font-size: 3.2rem;
+    }
+  }
+
+  /* .header__logo-desc */
+
+  &__logo-desc {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+    @include small-tablet {
+      font-size: 2rem;
+    }
+  }
+
+  /* .header__burger */
+
+  &__burger {
+    position: relative;
+    z-index: 5;
+    display: grid;
+    width: 8rem;
+    height: 8rem;
+    align-items: center;
+    justify-content: center;
+    &.isActive {
+      & .header__burger-svg-box {
+        &.inActive {
+          transform: scale(0);
+        }
+        &.isActive {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  /* .header__burger-svg-box */
+
+  &__burger-svg-box {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 4.8rem;
+    height: 4.8rem;
+    transition: transform 0.3s;
+    & svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    &.inActive {
+      transform: scale(1);
+    }
+    &.isActive {
+      transform: scale(0);
+    }
+  }
+
+  /* .header__nav-wrapper */
+
+  &__nav-wrapper {
+    @include small-tablet {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: url(./assets/images/burger-bg.png) no-repeat bottom/cover, $basic-gradient;
+      padding: 22.4rem 0 6.4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10rem;
+      transform: translateX(-100%);
+      transition: transform 0.3s;
+      &.isActive {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  /* .header__nav */
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8rem;
+    padding: 2.8rem 3.2rem;
+    border-radius: 2rem;
+    position: relative;
+    @include small-tablet {
+      flex-direction: column;
+      gap: 5.6rem;
+      max-height: 59rem;
+      max-height: 80rem;
+      overflow: auto;
+      width: calc(100% - 4rem);
+      margin: 0 2rem;
+        &::-webkit-scrollbar {
+            width: 0.3rem; /* ширина скроллбара */
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $purple; /* цвет ползунка */
+        }
+        &::-webkit-scrollbar-track {
+            background:  $light-grew; /* цвет трека */
+        }
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      border-radius: 2rem;
+      backdrop-filter: blur(32px);
+      -webkit-backdrop-filter: blur(32px);
+      background: linear-gradient(360deg, rgba(214, 214, 214, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+      @include small-tablet {
+        display: none;
+      }
+    }
+  }
+
+  /* .header__nav-list */
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    @include small-tablet {
+      flex-direction: column;
+      gap: 5.6rem;
+    }
+  }
+
+  /* .header__nav-item */
+
+  &__nav-item {
+  
+  }
+
+  /* .header__nav-link */
+
+  &__nav-link {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      height: 0.15rem;
+      background-color: $white;
+      width: 0%;
+      left: 0;
+      bottom: -0.6rem;
+      transition: width 0.3s;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  /* .header__social */
+
+  &__social {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  /* .header__social-mail */
+
+  &__social-mail {
+    font-family: 'ActayWide';
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+
+  /* .header__social-app-list */
+
+  &__social-app-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* .header__social-app */
+
+  &__social-app {
+    width: 10.4rem;
+    height: 10.4rem;
+    border-radius: 50%;
+    backdrop-filter: blur(26.169567108154297px);
+    -webkit-backdrop-filter: blur(26.169567108154297px);
+    background: rgba(255, 255, 255, 0.3);
+    background-color: rgba(226, 204, 227, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:not(:first-child) {
+      margin-left: -1.6rem;
+    }
+    &:nth-child(2) {
+      z-index: 2;
+    }
+  }
+
+  /* .header__social-app-img-box */
+
+  &__social-app-img-box {
+    width: 7.2rem;
+    height: 7.2rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

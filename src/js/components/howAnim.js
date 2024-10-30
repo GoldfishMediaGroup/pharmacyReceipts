@@ -1,0 +1,101 @@
+import { gsap, ScrollTrigger, Draggable, MotionPathPlugin, ScrollToPlugin } from 'gsap/all';
+
+function howAnim() {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
+
+  const zSpacing = -1000;
+
+  const frames = gsap.utils.toArray('.how__inner-frame');
+
+
+  const titleBox = document.querySelector('.how__title-box');
+  
+  const bgBox = document.querySelector('.how__wrapper-desktop .how__bg-box');
+  const bgBoxMob = document.querySelector('.how__wrapper-mobile .how__bg-box');
+  
+  const contentBox = document.querySelector('.how__content-box-desktop');
+  const contentBoxMob = document.querySelector('.how__content-box-mobile');
+
+  frames.forEach((frame, i) => {
+    gsap.set(frame, { z: i * zSpacing + zSpacing / 0.8, filter: 'blur(10px)' });
+  });
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.how__anim-wrapper-desktop',
+      start: 'top',
+      end: '+=3500rem',
+      scrub: true,
+      pin: true,
+      // pinSpacing: true,
+      // anticipatePin: 1,
+      anticipatePin: 0,
+      invalidateOnRefresh: !0,
+    }
+  });
+
+  tl.to(
+    titleBox,
+    {
+      opacity: 0,
+      duration: 0.4,
+    },
+    '0'
+  );
+
+  tl.to(
+    frames,
+    {
+      ease: 'linear',
+      keyframes: {
+        '0%': { filter: 'blur(10px)', rotationY: 0, opacity: 1 },
+        '65%': { filter: 'blur(0px)', opacity: 1 },
+        '70%': {
+          z: -500,
+          opacity: 1,
+          filter: 'blur(0px)',
+          rotationY: (i) => (i % 2 === 0 ? 10 : -10)
+        },
+        '100%': {
+          opacity: (i) => (i === frames.length - 1 ? 1 : 0),
+          z: (i) => (i === frames.length - 1 ? -500 : 1500)
+        }
+      },
+      stagger: {
+        amount: 0.8,
+
+      }
+    },
+    '-0.2s'
+  );
+
+  gsap.to([bgBox, contentBox],{
+    y: '60vh',
+    ease: 'linear',
+    scrollTrigger: {
+      trigger: '.how__anim-wrapper-desktop',
+      start: '10rem',
+      end: 'bottom top',
+      scrub: !0,
+      scrub: 0,
+      invalidateOnRefresh: !0
+    }
+  });
+  gsap.to([bgBoxMob, contentBoxMob],{
+    y:'10vh',
+    ease: 'linear',
+    scrollTrigger: {
+      trigger: '.how__wrapper-mobile',
+      start: '10rem',
+      end: 'bottom top',
+      scrub: !0,
+      scrub: 0,
+      invalidateOnRefresh: !0
+    }
+  });
+
+
+}
+
+export default howAnim;

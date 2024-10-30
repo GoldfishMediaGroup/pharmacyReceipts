@@ -1,0 +1,385 @@
+.trust {
+  overflow: hidden;
+  position: relative;
+
+  & .container {
+    max-width: 100%;
+    width: 192rem;
+
+    @include small-tablet {
+      width: 100%;
+      // overflow: visible;
+    }
+  }
+  /* .trust__inner */
+
+  &__inner {
+    width: 162rem;
+    margin: 0 auto;
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  /* .banner__bg-box */
+
+  &__bg-box {
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: $basic-gradient;
+    // z-index: -1;
+  }
+
+  /* .trust__content-wrapper */
+
+  &__content-wrapper {
+    padding: 20rem 3.2rem 18rem;
+    position: relative;
+
+    @include small-tablet {
+      padding: 16rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7.6rem;
+    }
+  }
+  /* .trust__content-box */
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    gap: 18rem;
+    @include small-tablet {
+      gap: 3.2rem;
+    }
+  }
+
+  /* .trust__subtitle */
+
+  &__subtitle {
+  }
+
+  /* .trust__title-box */
+
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    width: 75rem;
+    @include small-tablet {
+      width: 100%;
+      gap: 4.8rem;
+    }
+  }
+
+  /* .trust__title */
+
+  &__title {
+    @include small-tablet {
+      font-size: 4.8rem;
+    }
+  }
+
+  /* .trust__desc */
+
+  &__desc {
+    & span {
+      font-weight: 700;
+    }
+    @include small-tablet {
+      font-size: 2.8rem;
+    }
+  }
+
+  /* .trust__img-box */
+
+  &__img-box {
+    width: 79.9rem;
+    height: 94.7rem;
+    position: absolute;
+    top: 0;
+    right: -14rem;
+    bottom: 0;
+
+    @include small-tablet {
+      position: relative;
+      right: 0;
+      width: 75rem;
+      height: 71rem;
+      margin: 0 -1.6rem;
+    }
+  }
+
+  /* .trust__billet */
+
+  &__billet {
+    box-shadow: -5px 8px 21px 0 rgba(117, 15, 109, 0.1), -22px 32px 39px 0 rgba(117, 15, 109, 0.09),
+      -49px 73px 53px 0 rgba(117, 15, 109, 0.05), -87px 130px 62px 0 rgba(117, 15, 109, 0.01),
+      -135px 203px 68px 0 rgba(117, 15, 109, 0);
+    background: $white;
+    border-radius: 10rem;
+    width: fit-content;
+    position: absolute;
+    &--vertex {
+      padding: 6rem 9rem;
+      transform: rotate(-9deg);
+      bottom: 88rem;
+      left: 23.7rem;
+
+      @include small-tablet {
+        padding: 4.4rem 6.6rem;
+        bottom: 52rem;
+        left: 18rem;
+      }
+
+      & .trust__billet-img-box {
+        width: 19.356rem;
+        height: 3.137rem;
+
+        @include small-tablet {
+          width: 14.4rem;
+          height: 2.3rem;
+        }
+      }
+    }
+    &--ranbaxy {
+      padding: 5rem 6rem;
+      transform: rotate(28deg);
+      bottom: 83rem;
+      right: -19rem;
+      @include small-tablet {
+        padding: 3.6rem 4.4rem;
+        bottom: 47rem;
+        right: 0.5rem;
+      }
+      & .trust__billet-img-box {
+        width: 24.445rem;
+        height: 3.079rem;
+        @include small-tablet {
+          width: 18.4rem;
+          height: 2.2rem;
+        }
+      }
+    }
+
+    &--valenta {
+      padding: 1.6rem 4rem;
+      bottom: 70rem;
+      left: 7.7rem;
+      transform: rotate(-16deg);
+      @include small-tablet {
+        padding: 1.2rem 3rem;
+        bottom: 39rem;
+        left: 3rem;
+      }
+      & .trust__billet-img-box {
+        width: 17.549rem;
+        height: 5.54rem;
+        @include small-tablet {
+          width: 13.2rem;
+          height: 4rem;
+        }
+      }
+    }
+
+    &--haleon {
+      padding: 4rem 8rem;
+      bottom: 73rem;
+      right: 1.6rem;
+      transform: rotate(4deg);
+      @include small-tablet {
+        padding: 4rem 6rem;
+        bottom: 39rem;
+        right: 19rem;
+      }
+      & .trust__billet-img-box {
+        width: 28.1rem;
+        height: 4.6rem;
+        @include small-tablet {
+          width: 18rem;
+          height: 2.8rem;
+        }
+      }
+    }
+
+    &--drtheiss {
+      padding: 5.8rem;
+      bottom: 51rem;
+      left: 2.9rem;
+      transform: rotate(-22deg);
+      @include small-tablet {
+        padding: 4.2rem;
+        bottom: 25rem;
+        left: 0rem;
+      }
+      & .trust__billet-img-box {
+        width: 26.639rem;
+        height: 3.513rem;
+        @include small-tablet {
+          width: 20rem;
+          height: 2.6rem;
+        }
+      }
+    }
+
+    &--petrovax {
+      padding: 3.2rem 6rem;
+      bottom: 56rem;
+      right: -4rem;
+      transform: rotate(-4deg);
+      @include small-tablet {
+        padding: 2.4rem 4.4rem;
+        bottom: 26rem;
+        right: 14rem;
+      }
+      & .trust__billet-img-box {
+        width: 29.3rem;
+        height: 7.5rem;
+        @include small-tablet {
+          width: 22rem;
+          height: 5rem;
+        }
+      }
+    }
+
+    &--grindex {
+      padding: 5rem 8rem;
+      bottom: 32rem;
+      left: 12.2rem;
+      transform: rotate(-6deg);
+      @include small-tablet {
+        padding: 3.6rem 6rem;
+        bottom: 11rem;
+        left: 8.8rem;
+      }
+      & .trust__billet-img-box {
+        width: 23.7rem;
+        height: 5.1rem;
+        @include small-tablet {
+          width: 17.8rem;
+          height: 3.74rem;
+        }
+      }
+    }
+
+    &--zambon {
+      padding: 5rem 8rem;
+      bottom: 35rem;
+      right: -14rem;
+      transform: rotate(12deg);
+      @include small-tablet {
+        padding: 3.6rem 6rem;
+        transform: rotate(7deg);
+
+        bottom: 10rem;
+  
+        right: 2rem;
+      }
+      & .trust__billet-img-box {
+        width: 23.7rem;
+        height: 6.7rem;
+        @include small-tablet {
+          width: 17.8rem;
+          height: 5rem;
+        }
+      }
+    }
+
+    &--sandoz {
+      padding: 3.2rem 6rem;
+      transform: rotate(8deg);
+      bottom: 16rem;
+      left: 6.8rem;
+      @include small-tablet {
+        padding: 2.4rem 4.4rem;
+        bottom: 0;
+        left: -4.5rem;
+      }
+      & .trust__billet-img-box {
+        width: 38rem;
+        height: 4.5rem;
+        @include small-tablet {
+          width: 28.5rem;
+          height: 3.32rem;
+        }
+      }
+    }
+
+    &--galderma {
+      padding: 5rem 6rem;
+      right: -25.2rem;
+      bottom: 9.3rem;
+      transform: rotate(36deg);
+      @include small-tablet {
+        padding: 3.6rem 4.4rem;
+        transform: rotate(17deg);
+        bottom: -4rem;
+        right: 3rem;
+      }
+      & .trust__billet-img-box {
+        width: 38.2rem;
+        height: 4.2rem;
+        @include small-tablet {
+          width: 29rem;
+          height: 3.43rem;
+        }
+      }
+    }
+
+    &--reckitt {
+      padding: 2rem 8rem;
+      transform: rotate(-6deg);
+      bottom: -2rem;
+      left: 4.3rem;
+      @include small-tablet {
+        padding: 1.4rem 6rem;
+        transform: rotate(32deg);
+        bottom: 25rem;
+        left: 61rem;
+      }
+      & .trust__billet-img-box {
+        width: 22.4rem;
+        height: 9.6rem;
+        @include small-tablet {
+          width: 16.8rem;
+          height: 7.2rem;
+        }
+      }
+    }
+
+    &--krka {
+      padding: 3.2rem 8rem;
+      transform: rotate(11deg);
+      right: -6rem;
+      bottom: -7rem;
+      @include small-tablet {
+        padding: 2.4rem 6rem;
+        transform: rotate(-48deg);
+        bottom: 52rem;
+        left: -8rem;
+        right: auto;
+      }
+      & .trust__billet-img-box {
+        width: 25.2rem;
+        height: 7.6rem;
+        @include small-tablet {
+          width: 18.9rem;
+          height: 5.68rem;
+        }
+      }
+    }
+  }
+
+  /* .trust__billet-img-box */
+
+  &__billet-img-box {
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

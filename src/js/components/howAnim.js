@@ -24,27 +24,32 @@ function howAnim() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.how__anim-wrapper-desktop',
-      start: 'top',
-      end: '+=3500rem',
+      // trigger: '.how',
+
+     start: "top ",
+      end: '+=4500',
       scrub: true,
       pin: true,
-      // pinSpacing: true,
+      pinSpacer: true,
+      invalidateOnRefresh: !0, 
       // anticipatePin: 1,
       anticipatePin: 0,
-      invalidateOnRefresh: !0,
     }
   });
+
+
+//  tl.set('.how', { z: 0.1 })
 
   tl.to(
     titleBox,
     {
       opacity: 0,
-      duration: 0.4,
+      // duration: 0.4,
     },
-    '0'
-  );
+    // '0'
+  )
 
-  tl.to(
+ .to(
     frames,
     {
       ease: 'linear',
@@ -67,7 +72,7 @@ function howAnim() {
 
       }
     },
-    '-0.2s'
+    // '-0.2s'
   );
 
   gsap.to([bgBox, contentBox],{
@@ -78,7 +83,7 @@ function howAnim() {
       start: '10rem',
       end: 'bottom top',
       scrub: !0,
-      scrub: 0,
+      // scrub: 0,
       invalidateOnRefresh: !0
     }
   });
@@ -90,7 +95,7 @@ function howAnim() {
       start: '10rem',
       end: 'bottom top',
       scrub: !0,
-      scrub: 0,
+      // scrub: 0,
       invalidateOnRefresh: !0
     }
   });

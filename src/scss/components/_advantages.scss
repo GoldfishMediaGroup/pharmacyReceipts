@@ -79,13 +79,14 @@
     display: block;
     position: relative;
     // transform-origin: 50% 120%;
-    transform-origin: 50% 165.75%;
-    transform-origin: 50% 140%;
+    // transform-origin: 50% 165.75%;
+    // transform-origin: 50% 140%;
+    transform-origin: 50% 170%;
     width: 100%;
     top: 12rem;
     left: 0;
     aspect-ratio: 1 / 1;
-    transform: rotate(-25deg);
+    transform: rotate(-17deg);
     @include small-tablet {
       opacity: 0;
       visibility: hidden;
@@ -100,7 +101,7 @@
     display: flex !important;
     justify-content: space-between;
     height: auto;
-    width: 160rem;
+    width: 150rem;
     transform-origin: 50% 100%;
     position: relative;
 
@@ -111,13 +112,17 @@
       position: absolute;
       transform: rotate(45deg);
       top: 32%;
-      left: 79%;
+      left: 89%;
+      top: 30%;
+      left: 73%;
     }
     &:nth-child(3) {
       position: absolute;
       transform: rotate(-45deg);
       top: 32%;
+      top: 30%;
       left: -79%;
+      left: -73%;
     }
   }
 
@@ -182,12 +187,13 @@
 
   &__card-inner {
     padding: 3.2rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
     background: $white;
     border-radius: 4rem;
-    height: 49.5rem;
+    height: 50.5rem;
     width: 36.4rem;
     @include small-tablet {
       height: auto;
@@ -292,10 +298,14 @@
 
   &__card-img-box {
     width: 10rem;
+    width: 10.5rem;
     height: 10rem;
+    height: 10.5rem;
     @include small-tablet {
       width: 11.6rem;
+      width: 12.6rem;
       height: 11.6rem;
+      height: 12.6rem;
     }
     &:not(:first-of-type) {
       margin-left: -2.8rem;

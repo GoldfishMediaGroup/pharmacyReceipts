@@ -23,8 +23,37 @@ function headerScroll () {
     
     
 
+    let lastScrollPosition = 0;
+
+    const updateMenuVisibility = () => {
+      const currentScrollPosition = window.scrollY;
+  
+      // if (window.innerWidth <= 767) {
+        if (currentScrollPosition > lastScrollPosition) {
+          nav.classList.add('isActive');
+        } else {
+          nav.classList.remove('isActive');
+        }
+      // } else {
+      //   nav.classList.remove('isActive');
+      // }
+  
+      lastScrollPosition = currentScrollPosition;
+    };
+  
+    window.addEventListener('scroll', updateMenuVisibility);
+    // window.addEventListener('resize', updateMenuVisibility);
+  
+    // Вызываем функцию обновления видимости меню при загрузке страницы
+    updateMenuVisibility();
+
+
 
 }
+
+
+
+
 
 
 

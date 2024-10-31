@@ -19,10 +19,10 @@ function mockupAnim() {
 
   let main = gsap.timeline({
     scrollTrigger: {
-      start: 'top',
-      end: '0% 0%',
-      end: '+=1300',
       trigger: inner,
+      start: 'top',
+      // end: '0% 0%',
+      end: '+=2000',
       scrub: true,
       pin: true,
       pinSpacer: true,
@@ -33,6 +33,7 @@ function mockupAnim() {
   });
 
   gsap.set(contentBox, {opacity: 0})
+  // tl.set(inner, { z: 0.1 })
 
   main.to(columnWrapper, {
     transformOrigin: '30% 10%',

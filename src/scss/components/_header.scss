@@ -3,6 +3,7 @@
   left: 0;
   right: 0;
   top: 3.2rem;
+  top: 1.2rem;
   z-index: 200;
 
   @include small-tablet {
@@ -10,6 +11,10 @@
   }
 
   &.fixed-nav {
+    transition: transform 0.5s;
+    &.isActive {
+      transform: translateY(-150%);
+    }
     & .header__nav:before {
       opacity: 1;
     }
@@ -199,15 +204,15 @@
       overflow: auto;
       width: calc(100% - 4rem);
       margin: 0 2rem;
-        &::-webkit-scrollbar {
-            width: 0.3rem; /* ширина скроллбара */
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: $purple; /* цвет ползунка */
-        }
-        &::-webkit-scrollbar-track {
-            background:  $light-grew; /* цвет трека */
-        }
+      &::-webkit-scrollbar {
+        width: 0.3rem; /* ширина скроллбара */
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $purple; /* цвет ползунка */
+      }
+      &::-webkit-scrollbar-track {
+        background: $light-grew; /* цвет трека */
+      }
     }
     &:before {
       position: absolute;
@@ -241,7 +246,6 @@
   /* .header__nav-item */
 
   &__nav-item {
-  
   }
 
   /* .header__nav-link */

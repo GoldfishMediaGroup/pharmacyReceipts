@@ -10,12 +10,13 @@
     inset: 0;
     overflow: hidden;
     pointer-events: none;
+    
     &::before {
-      position: absolute;
-      inset: 0;
-      content: '';
-      backdrop-filter: blur(4px);
-      background: rgba(198, 144, 188, 0.3);
+      // position: absolute;
+      // inset: 0;
+      // content: '';
+      // backdrop-filter: blur(4px);
+      // background: rgba(198, 144, 188, 0.3);
       @include small-tablet {
         position: absolute;
         content:'';

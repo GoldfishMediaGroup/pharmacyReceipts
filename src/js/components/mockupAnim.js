@@ -6,6 +6,7 @@ function mockupAnim() {
 
 
   const inner = document.querySelector('.mockup__inner')
+  const innerWrapper = document.querySelector('.mockup__inner-wrapper')
   const columnWrapper = document.querySelector('.mockup__column-wrapper')
 
   const column1 = document.querySelector('.mockup__column1')
@@ -29,6 +30,7 @@ function mockupAnim() {
       invalidateOnRefresh: !0, 
       // anticipatePin: 1,
       anticipatePin: 0,
+         pinType: "fixed"
     }
   });
 
@@ -68,8 +70,8 @@ function mockupAnim() {
 
 
 
-    gsap.to([columnWrapper, contentBox], {
-      y: window.innerWidth > 768 ? '80vh' : '15vh',
+    gsap.to(innerWrapper, {
+      y: window.innerWidth > 768 ? '50vh' : '15vh',
       ease: 'linear',
       scrollTrigger: {
         trigger: inner,

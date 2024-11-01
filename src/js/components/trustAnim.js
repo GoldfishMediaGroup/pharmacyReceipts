@@ -23,6 +23,8 @@ function trustBlocks() {
 
   const container = document.querySelector('.trust .container');
 
+  const inner = document.querySelector('.trust__inner')
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: trust,
@@ -41,7 +43,8 @@ function trustBlocks() {
       pinSpacer: true,
       invalidateOnRefresh: !0,
       // anticipatePin: 0,
-      anticipatePin: 0.5
+      anticipatePin: 0.5,
+      pinType: "fixed"
     },
     ease: 'linear'
   });
@@ -172,11 +175,11 @@ function trustBlocks() {
 
   const m = trust.querySelector('.trust__bg-box');
   const a = trust.querySelector('.trust__content-wrapper');
-  gsap.set(m, { z: 0.1 });
-  gsap.set(a, { z: 0.2 });
+  // gsap.set(m, { z: 0.1 });
+  // gsap.set(a, { z: 0.2 });
 
   gsap.to([m, a], {
-    y: window.innerWidth > 768 ? '75vh' : '15vh',
+    y: window.innerWidth > 768 ? '50vh' : '15vh',
     ease: 'linear',
     scrollTrigger: {
       trigger: container,

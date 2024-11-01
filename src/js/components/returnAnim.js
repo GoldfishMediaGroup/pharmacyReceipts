@@ -9,11 +9,11 @@ function returnAnim() {
 
     const m = paralax.querySelector('.return__bg-box');
     const a = paralax.querySelector('.return__content-box');
-    gsap.set(m, { z: 0.1 });
-    gsap.set(a, { z: 0.2 });
+    // gsap.set(m, { z: 0.1 });
+    // gsap.set(a, { z: 0.2 });
 
     gsap.to([m, a], {
-      y: window.innerWidth > 768 ? '80vh' : '15vh',
+      y: window.innerWidth > 768 ? '50vh' : '15vh',
       ease: 'linear',
       scrollTrigger: {
         trigger: paralax,

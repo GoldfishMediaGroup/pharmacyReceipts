@@ -87,6 +87,17 @@
     // height: 100vh;
     position: relative;
     overflow: hidden;
+    will-change: transform;
+  }
+
+  &__anim-wrapper-desktop-inner {
+    width: 100%;
+    position: relative;
+    perspective: 1500px;
+    // height: 100vh;
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
   }
 
   &__content-box-desktop {

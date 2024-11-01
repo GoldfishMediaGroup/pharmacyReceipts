@@ -35,6 +35,7 @@ function howAnim() {
       // anticipatePin: 0,
       // anticipatePin: 1,    
         anticipatePin: 0.5,
+          pinType: "fixed"
     } ,   ease: "power2.inOut" 
   });
 
@@ -76,8 +77,8 @@ function howAnim() {
     // '-0.2s'
   );
 
-  gsap.to([bgBox, contentBox],{
-    y: '60vh',
+  gsap.to( '.how__anim-wrapper-desktop-inner',{
+    y: '50vh',
     ease: 'linear',
     scrollTrigger: {
       trigger: '.how__anim-wrapper-desktop',

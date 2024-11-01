@@ -47,6 +47,7 @@
   &__content-box {
     height: 108rem;
     position: relative;
+    will-change: transform;
     // z-index: 5;
 
     @include small-tablet {

@@ -63,6 +63,7 @@
 
     @include small-tablet {
       padding: 16rem 0;
+      padding: 8rem 0 16rem;
       display: flex;
       flex-direction: column;
       gap: 7.6rem;

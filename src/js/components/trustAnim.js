@@ -297,12 +297,14 @@ function trustBlocks() {
   //  '-=0.6'
   // )
 
-  tl.from(krka, {
-    duration: 1.5,
-    ease: 'power2.in',
-    y: window.innerWidth > 768 ? '-110rem' : '-180rem'
-  })
-    .from(
+  if(  window.innerWidth > 768) {
+    tl.from(krka, {
+      duration: 1.5,
+      ease: 'power2.in',
+      y: window.innerWidth > 768 ? '-110rem' : '-180rem'
+    })
+  }
+  tl.from(
       reckitt,
       {
         duration: 1.5,
@@ -406,6 +408,15 @@ function trustBlocks() {
       },
       '-=1.48'
     );
+
+    if(  window.innerWidth < 768) {
+      tl.from(krka, {
+        duration: 1.5,
+        ease: 'power2.in',
+        y: window.innerWidth > 768 ? '-110rem' : '-180rem'
+      },
+      '-=1.46')
+    }
 
   const m = trust.querySelector('.trust__bg-box');
   const a = trust.querySelector('.trust__content-wrapper');

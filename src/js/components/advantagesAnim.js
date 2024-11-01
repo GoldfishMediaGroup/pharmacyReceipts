@@ -22,7 +22,8 @@ function advantagesAnim() {
       },
   });
   gsap.to(cardWrapper, {
-    rotate: '+=30deg',
+    // rotate: '+=30deg',
+    rotate: '+=27deg',
     ease: 'ease-in',
       scrollTrigger: {
         trigger: section,

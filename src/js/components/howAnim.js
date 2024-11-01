@@ -32,9 +32,10 @@ function howAnim() {
       pin: true,
       pinSpacer: true,
       invalidateOnRefresh: !0, 
-      // anticipatePin: 1,
-      anticipatePin: 0,
-    }
+      // anticipatePin: 0,
+      // anticipatePin: 1,    
+        anticipatePin: 0.5,
+    } ,   ease: "power2.inOut" 
   });
 
 

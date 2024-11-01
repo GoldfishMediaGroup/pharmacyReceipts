@@ -74,4 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     scrollTopBtn();
   } catch {}
+
+  ScrollTrigger.refresh();
 });

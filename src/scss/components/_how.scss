@@ -98,6 +98,7 @@
     position: relative;
     overflow: hidden;
     will-change: transform;
+    height: 100vh;
   }
 
   &__content-box-desktop {
@@ -158,8 +159,8 @@
       position: absolute;
       inset: 0;
       content: '';
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
+      // backdrop-filter: blur(5px);
+      // -webkit-backdrop-filter: blur(5px);
       background: rgba(198, 144, 188, 0.5);
       z-index: -1;
       scale: 25;

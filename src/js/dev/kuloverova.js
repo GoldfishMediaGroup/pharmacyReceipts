@@ -5,6 +5,8 @@ import 'animate.css';
 import WOW from 'wow.js';
 window.$ = window.jQuery = require('jquery');
 
+import Lenis from '@studio-freight/lenis';
+
 import { rem } from '../utils/constants';
 
 import popup from '../utils/popup';
@@ -23,12 +25,13 @@ import trustAnim from '../components/trustAnim';
 import mockupAnim from '../components/mockupAnim';
 import questionsTabs from '../components/questionsTabs';
 import scrollTopBtn from '../components/scrollTopBtn';
+import smoothScroll from '../components/smoothScroll';
 
 export const modules = {};
 
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(ScrollToPlugin);
+
   try {
     popup();
   } catch {}
@@ -74,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     scrollTopBtn();
   } catch {}
-
-  ScrollTrigger.refresh();
+  try {
+    smoothScroll();
+  } catch {}
 });

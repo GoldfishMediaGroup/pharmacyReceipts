@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 html {
   font-family: 'Open Sans'; // шрифт по умолчанию по сайту

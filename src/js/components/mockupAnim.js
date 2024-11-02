@@ -22,7 +22,6 @@ function mockupAnim() {
     scrollTrigger: {
       trigger: inner,
       start: 'top',
-      // end: '0% 0%',
       end: '+=2000',
       scrub: true,
       pin: true,
@@ -35,7 +34,6 @@ function mockupAnim() {
   });
 
   gsap.set(contentBox, {opacity: 0})
-  // tl.set(inner, { z: 0.1 })
 
   main.to(columnWrapper, {
     transformOrigin: '30% 10%',
@@ -71,16 +69,16 @@ function mockupAnim() {
 
 
     gsap.to(innerWrapper, {
-      y: window.innerWidth > 768 ? '50vh' : '15vh',
-      ease: 'linear',
-      scrollTrigger: {
-        trigger: inner,
-        start: '8rem',
-        end: 'bottom top',
-        scrub: !0,
-        scrub: 0,
-        invalidateOnRefresh: !0,
-      }
+      y: window.innerWidth > 768 ? '60vh' : '15vh',
+      ease: 'none',
+    force3D: true,
+    scrollTrigger: {
+      trigger: inner,
+      start:  '10rem',
+      end: 'bottom top',
+      scrub: 0,
+      invalidateOnRefresh: !0,
+    }
     });
 }
 

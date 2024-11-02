@@ -14,22 +14,27 @@
   /* .return__inner */
 
   &__inner {
+    position: relative;
   }
 
   /* .return__bg-box */
 
   &__bg-box {
     height: 108rem;
-    max-width: 100%;
+    // max-width: 100%;
     width: 192rem;
     margin: 0 auto;
     position: absolute;
     inset: 0;
+    left: 50%;
+    transform: translateX(-50%);
     overflow: hidden;
-    pointer-events: none;
+    pointer-events: none;    
+    will-change: transform;
 
     @include small-tablet {
       height: auto;
+      width: 100%;
     }
     & img,
     & video {
@@ -48,7 +53,8 @@
     position: relative;
     margin-top: 15rem;
     margin-right: 8.5rem;
-    justify-content: space-between;
+    justify-content: space-between;    
+    will-change: transform;
     @include small-tablet {
       flex-direction: column-reverse;
       height: auto;
@@ -95,8 +101,8 @@
     position: absolute;
     padding: 2rem;
     border-radius: 2rem;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    // backdrop-filter: blur(16px);
+    // -webkit-backdrop-filter: blur(16px);
     background: rgba(255, 255, 255, 0.3);
     width: 35.5rem;
     &::before {
@@ -222,7 +228,11 @@
     opacity: 0;
     z-index: -100;
     visibility: hidden;
+    max-width: 0;
+    overflow: hidden;
     @include small-tablet {
+      overflow: visible;
+      max-width: unset;
       position: static;
       opacity: 1;
       z-index: 0;

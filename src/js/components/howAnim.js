@@ -8,12 +8,11 @@ function howAnim() {
 
   const frames = gsap.utils.toArray('.how__inner-frame');
 
-
   const titleBox = document.querySelector('.how__title-box');
-  
+
   const bgBox = document.querySelector('.how__wrapper-desktop .how__bg-box');
   const bgBoxMob = document.querySelector('.how__wrapper-mobile .how__bg-box');
-  
+
   const contentBox = document.querySelector('.how__content-box-desktop');
   const contentBoxMob = document.querySelector('.how__content-box-mobile');
 
@@ -22,36 +21,36 @@ function howAnim() {
   });
 
   const tl = gsap.timeline({
+    force3D: true,
     scrollTrigger: {
       trigger: '.how__anim-wrapper-desktop',
-      // trigger: '.how',
-
-     start: "top ",
+ 
+      start: 'top top',
       end: '+=4500',
       scrub: true,
       pin: true,
       pinSpacer: true,
-      invalidateOnRefresh: !0, 
-      // anticipatePin: 0,
-      // anticipatePin: 1,    
-        anticipatePin: 0.5,
-          pinType: "fixed"
-    } ,   ease: "power2.inOut" 
+      invalidateOnRefresh: !0,
+      anticipatePin: 0,
+      // anticipatePin: 1,
+      pinType: 'fixed',
+      immediatelyRender : false,
+
+    },
+    ease: 'power2.inOut'
   });
 
 
-//  tl.set('.how', { z: 0.1 })
 
   tl.to(
     titleBox,
     {
-      opacity: 0,
+      opacity: 0
       // duration: 0.4,
-    },
+    }
     // '0'
   )
-
- .to(
+  .to(
     frames,
     {
       ease: 'linear',
@@ -70,39 +69,37 @@ function howAnim() {
         }
       },
       stagger: {
-        amount: 0.8,
-
+        amount: 0.8
       }
-    },
+    }
     // '-0.2s'
   );
 
-  gsap.to( '.how__anim-wrapper-desktop-inner',{
-    y: '50vh',
-    ease: 'linear',
+  gsap.to('.how__anim-wrapper-desktop-inner', {
+
+    y: window.innerWidth > 768 ? '60vh' : '15vh',
+    ease: 'none',
+    force3D: true,
     scrollTrigger: {
       trigger: '.how__anim-wrapper-desktop',
-      start: '10rem',
+      start:  '10rem',
       end: 'bottom top',
-      scrub: !0,
-      // scrub: 0,
-      invalidateOnRefresh: !0
+      scrub: 0,
+      invalidateOnRefresh: !0,
     }
   });
-  gsap.to([bgBoxMob, contentBoxMob],{
-    y:'10vh',
+  gsap.to([bgBoxMob, contentBoxMob], {
+    translateY: '10vh',
     ease: 'linear',
+    force3D: true,
     scrollTrigger: {
-      trigger: '.how__wrapper-mobile',
-      start: '10rem',
+      trigger: '.how__anim-wrapper-desktop',
+      start:  '10rem',
       end: 'bottom top',
-      scrub: !0,
-      // scrub: 0,
-      invalidateOnRefresh: !0
+      scrub: 0,
+      invalidateOnRefresh: !0,
     }
   });
-
-
 }
 
 export default howAnim;

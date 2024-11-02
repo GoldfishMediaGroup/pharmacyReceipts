@@ -2,24 +2,21 @@ import { gsap, ScrollTrigger, Draggable, MotionPathPlugin, ScrollToPlugin } from
 
 function returnAnim() {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(ScrollToPlugin);
 
   const paralax = document.querySelector('.return');
+  const paralaxInner = document.querySelector('.return__inner');
 
 
-    const m = paralax.querySelector('.return__bg-box');
-    const a = paralax.querySelector('.return__content-box');
-    // gsap.set(m, { z: 0.1 });
-    // gsap.set(a, { z: 0.2 });
+    gsap.to(paralaxInner, {
 
-    gsap.to([m, a], {
-      y: window.innerWidth > 768 ? '50vh' : '15vh',
-      ease: 'linear',
+      y: window.innerWidth > 768 ? '55vh' : '15vh',
+      ease: 'none',
+      force3D: true,
       scrollTrigger: {
         trigger: paralax,
-        start:  'top 2rem',
+        start:  'top',
         end: 'bottom top',
-        scrub: !0,
+        scrub: 0,
         invalidateOnRefresh: !0,
       }
     });

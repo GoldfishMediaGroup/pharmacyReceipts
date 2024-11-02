@@ -26,7 +26,7 @@ function howAnim() {
       trigger: '.how__anim-wrapper-desktop',
  
       start: 'top top',
-      end: '+=4500',
+      end: '+=3000',
       scrub: true,
       pin: true,
       pinSpacer: true,

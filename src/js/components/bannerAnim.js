@@ -4,7 +4,7 @@ function bannerAnim() {
   gsap.registerPlugin(ScrollTrigger);
 
   const paralax = document.querySelector('.banner');
-  const paralaxInner = document.querySelector('.banner .container');
+  const paralaxInner = document.querySelector('.banner .banner__wrapper');
 
   gsap.to(paralaxInner, {
     y: window.innerWidth > 768 ? '60vh' : '15vh',

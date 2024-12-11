@@ -37,7 +37,7 @@ function trustBlocks() {
     scrollTrigger: {
       trigger: container,
       start: 'top',
-      end: '+=1000',
+      end: '+=2500',
       pin: true,
       scrub: !0,
       pinSpacer: true,

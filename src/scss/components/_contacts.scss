@@ -1,4 +1,6 @@
 .contacts {
+  position: relative;
+  z-index: 5;
   /* .contacts__container */
 
   &__container {

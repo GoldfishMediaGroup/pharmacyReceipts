@@ -2,21 +2,26 @@
   width: 100%;
   // height: 108rem;
   overflow: hidden;
-  // position: relative;
+  position: relative;
   background: $basic-gradient;
   // backface-visibility: hidden;
   /* .banner__inner */
+
   &::before {
     position: absolute;
     content: '';
-    inset: 0;
+    // inset: 0;
+    top: 0;
+    left: 0;
     max-width: 162rem;
     margin: 0 auto;
     width: 100%;
     width: 100%;
     height: 100%;
     z-index: 2;
-    background: url(./assets/images/bodyLine.png) repeat-y top/contain;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(./assets/images/bodyLine.png) no-repeat top/cover;
     @media (max-width: 48em) {
       background: url(./assets/images/bodyLineMob.png) repeat-y top/cover;
     }

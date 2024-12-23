@@ -5,18 +5,18 @@ function headerBurger () {
     const logo = document.querySelector('.header__logo-box')
 
     function openBurger() {
-        document.body.style.overflow = 'hidden';
-        // setTimeout(() => {
+        document.body.classList.add('no-scroll');
+        setTimeout(() => {
             burger.classList.add('isActive')
             navWrapper.classList.add('isActive');
             bannerMob.classList.add('isNoBg');
-        // }, 200)
+        }, 200)
  
 
     }
 
     function closeBurger() {
-        document.body.style.overflow = '';
+        document.body.classList.remove('no-scroll');
         burger.classList.remove('isActive')
         navWrapper.classList.remove('isActive');
         bannerMob.classList.remove('isNoBg');
@@ -42,8 +42,8 @@ function headerBurger () {
     
 
     window.addEventListener('resize', () => {
-        if(window.innerWidth > 768) {
-            closeBurger()
+        if (window.innerWidth > 768 && burger.classList.contains('isActive')) {
+            closeBurger();
         }
     })
 }

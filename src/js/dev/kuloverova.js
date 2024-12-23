@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scroll();
   } catch {}
   try {
-    // headerScroll();
+    headerScroll();
   } catch {}
   try {
     headerBurger();

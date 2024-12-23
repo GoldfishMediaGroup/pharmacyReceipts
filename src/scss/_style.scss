@@ -55,6 +55,10 @@ body {
     overflow: hidden;
     touch-action: none;
   }
+  &.no-scroll {
+    overflow: hidden!important;
+    touch-action: none!important;
+  }
 }
 
 .wrapper {

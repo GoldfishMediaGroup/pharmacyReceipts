@@ -1,11 +1,9 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import { gsap, ScrollTrigger, Draggable, MotionPathPlugin, ScrollToPlugin } from 'gsap/all';
-import 'animate.css';
-import WOW from 'wow.js';
 window.$ = window.jQuery = require('jquery');
 
-import Lenis from '@studio-freight/lenis';
+
 
 import { rem } from '../utils/constants';
 
@@ -79,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch {}
   try {
     if (innerWidth > 767) {
-      smoothScroll();
+      // smoothScroll();
     }
   } catch {}
 });

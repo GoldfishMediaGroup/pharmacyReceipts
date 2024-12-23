@@ -5,14 +5,18 @@
   top: 3.2rem;
   top: 1.2rem;
   z-index: 200;
-
+  transform: none;
+  // will-change: transform;
   @include small-tablet {
     // top: 2.4rem;
     top: 1.6rem;
   }
+  &.no-transform {
+    transform: none!important;
+  }
 
   &.fixed-nav {
-    transition: transform 0.18s;
+    transition: transform 0.3s;
     &.isActive {
       transform: translateY(-150%);
     }
@@ -35,7 +39,6 @@
     padding: 2.4rem;
     border-radius: 3.2rem;
     z-index: 400;
-    
 
     &:before {
       position: absolute;

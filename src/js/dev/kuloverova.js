@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTopBtn();
   } catch {}
   try {
-    smoothScroll();
+    if (innerWidth > 767) {
+      smoothScroll();
+    }
   } catch {}
 });

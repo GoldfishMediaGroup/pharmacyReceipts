@@ -7,7 +7,7 @@
   max-width: 192rem;
   overflow: hidden;
   height: 100%;
-  background: $basic-gradient;
+  // background: $basic-gradient;
   margin: 0 auto;
   &::before {
     position: absolute;
@@ -32,6 +32,7 @@
   align-items: flex-start;
   height: 100vh;
   will-change: transform;
+   background: $basic-gradient;
 }
 
 .mockup__inner-wrapper{

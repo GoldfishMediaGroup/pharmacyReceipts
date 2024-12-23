@@ -11,26 +11,30 @@ $grew-text: #8a8a8a;
 $light-grew: #cacaca;
 $basic-gradient: linear-gradient(209deg, #ff7ca0 0%, #c065c3 87.36%);
 
-html.lenis,
-html.lenis body {
-  height: auto;
+@media (min-width: 768px) {
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
 }
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
-}
 
 body {
   background: $basic-gradient, url(./assets/images/bodyLine.png) repeat-y top/cover;

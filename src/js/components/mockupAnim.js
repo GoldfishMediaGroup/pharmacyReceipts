@@ -9,11 +9,11 @@ function mockupAnim() {
   const innerWrapper = document.querySelector('.mockup__inner-wrapper')
   const columnWrapper = document.querySelector('.mockup__column-wrapper')
 
-  const column1 = document.querySelector('.mockup__column1')
-  const column2 = document.querySelector('.mockup__column2')
-  const column3 = document.querySelector('.mockup__column3')
-  const column4 = document.querySelector('.mockup__column4')
-  const column5 = document.querySelector('.mockup__column5')
+  const column1 = document.querySelector('.mockup__column--1')
+  const column2 = document.querySelector('.mockup__column--2')
+  const column3 = document.querySelector('.mockup__column--3')
+  const column4 = document.querySelector('.mockup__column--4')
+  const column5 = document.querySelector('.mockup__column--5')
 
   const contentBox = document.querySelector('.mockup__content-box')
 

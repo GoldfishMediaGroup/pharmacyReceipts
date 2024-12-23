@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scroll();
   } catch {}
   try {
-    headerScroll();
+    // headerScroll();
   } catch {}
   try {
     headerBurger();
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch {}
   try {
     if (innerWidth > 767) {
-      // smoothScroll();
+      smoothScroll();
     }
   } catch {}
 });

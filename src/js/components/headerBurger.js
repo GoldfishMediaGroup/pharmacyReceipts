@@ -1,4 +1,5 @@
 function headerBurger () {
+    const header = document.querySelector('header');
     const burger = document.querySelector('.header__burger');
     const navWrapper = document.querySelector('.header__nav-wrapper');
     const bannerMob = document.querySelector('.header__banner');
@@ -6,17 +7,19 @@ function headerBurger () {
 
     function openBurger() {
         document.body.classList.add('no-scroll');
-        setTimeout(() => {
+        header.classList.add('no-transform');
+        // setTimeout(() => {
             burger.classList.add('isActive')
             navWrapper.classList.add('isActive');
             bannerMob.classList.add('isNoBg');
-        }, 200)
+        // }, 200)
  
 
     }
 
     function closeBurger() {
         document.body.classList.remove('no-scroll');
+        header.classList.remove('no-transform');
         burger.classList.remove('isActive')
         navWrapper.classList.remove('isActive');
         bannerMob.classList.remove('isNoBg');

@@ -6,11 +6,11 @@ function headerBurger () {
 
     function openBurger() {
         document.body.style.overflow = 'hidden';
-        setTimeout(() => {
+        // setTimeout(() => {
             burger.classList.add('isActive')
             navWrapper.classList.add('isActive');
             bannerMob.classList.add('isNoBg');
-        }, 200)
+        // }, 200)
  
 
     }

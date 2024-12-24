@@ -1,4 +1,4 @@
-import { gsap, ScrollTrigger, Draggable, MotionPathPlugin, ScrollToPlugin } from 'gsap/all';
+import { gsap, ScrollTrigger} from 'gsap/all';
 
 function bannerAnim() {
   gsap.registerPlugin(ScrollTrigger);

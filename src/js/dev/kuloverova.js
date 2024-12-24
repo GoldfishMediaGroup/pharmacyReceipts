@@ -3,8 +3,6 @@ import 'swiper/css/bundle';
 import { gsap, ScrollTrigger, Draggable, MotionPathPlugin, ScrollToPlugin } from 'gsap/all';
 window.$ = window.jQuery = require('jquery');
 
-
-
 import { rem } from '../utils/constants';
 
 import popup from '../utils/popup';

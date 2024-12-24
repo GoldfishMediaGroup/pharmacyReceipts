@@ -1,7 +1,6 @@
-import { gsap, ScrollTrigger, Draggable, MotionPathPlugin, ScrollToPlugin } from 'gsap/all';
+import { gsap, ScrollTrigger} from 'gsap/all';
 function advantagesAnim() {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(ScrollToPlugin);
 
   const section = document.querySelector('.advantages')
   const ribbon = document.querySelector('.advantages__ribbon')

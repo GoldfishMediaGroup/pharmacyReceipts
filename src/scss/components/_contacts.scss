@@ -264,10 +264,11 @@
   &__ribbon {
     position: absolute;
     @include small-tablet {
-      z-index: -100;
-      opacity: 0;
-      width: 0;
-      overflow: hidden;
+      // z-index: -100;
+      // opacity: 0;
+      // width: 0;
+      // overflow: hidden;
+      display: none;
     }
   }
 

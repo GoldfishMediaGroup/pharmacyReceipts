@@ -88,10 +88,11 @@
     aspect-ratio: 1 / 1;
     transform: rotate(-17deg);
     @include small-tablet {
-      opacity: 0;
-      visibility: hidden;
-      position: absolute;
-      z-index: -100;
+      // opacity: 0;
+      // visibility: hidden;
+      // position: absolute;
+      // z-index: -100;
+      display: none;;
     }
   }
 
@@ -152,15 +153,17 @@
   /* .advantages__swiper-box */
 
   &__swiper-box {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    z-index: -100;
+    // opacity: 0;
+    // visibility: hidden;
+    // position: absolute;
+    // z-index: -100;
+    display: none;
     @include small-tablet {
-      opacity: 1;
-      visibility: visible;
-      position: static;
-      z-index: 0;
+      // opacity: 1;
+      // visibility: visible;
+      // position: static;
+      // z-index: 0;
+      display: block;
       margin-top: 15rem;
     }
   }

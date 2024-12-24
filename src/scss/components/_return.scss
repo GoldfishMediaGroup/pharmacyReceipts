@@ -228,19 +228,21 @@
   /* .return__swiper-box */
 
   &__swiper-box {
-    position: absolute;
-    opacity: 0;
-    z-index: -100;
-    visibility: hidden;
-    max-width: 0;
-    overflow: hidden;
+    // position: absolute;
+    // opacity: 0;
+    // z-index: -100;
+    // visibility: hidden;
+    // max-width: 0;
+    // overflow: hidden;
+    display: none;
     @include small-tablet {
-      overflow: visible;
-      max-width: unset;
-      position: static;
-      opacity: 1;
-      z-index: 0;
-      visibility: visible;
+      // overflow: visible;
+      // max-width: unset;
+      // position: static;
+      // opacity: 1;
+      // z-index: 0;
+      // visibility: visible;
+      display: block;
     }
   }
 

@@ -34,8 +34,6 @@ $basic-gradient: linear-gradient(209deg, #ff7ca0 0%, #c065c3 87.36%);
   }
 }
 
-
-
 body {
   background: $basic-gradient, url(./assets/images/bodyLine.png) repeat-y top/cover;
   // background: $basic-gradient, url(./assets/images/bodyLine.png) ;
@@ -56,8 +54,9 @@ body {
     touch-action: none;
   }
   &.no-scroll {
-    overflow: hidden!important;
-    touch-action: none!important;
+    min-height: 100vh;
+    overflow: hidden !important;
+    touch-action: none !important;
   }
 }
 

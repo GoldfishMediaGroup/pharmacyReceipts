@@ -92,7 +92,7 @@
       // visibility: hidden;
       // position: absolute;
       // z-index: -100;
-      display: none;;
+      display: none;
     }
   }
 
@@ -172,7 +172,7 @@
 
   &__swiper {
     overflow: visible !important;
-    padding-left: 27.5rem!important;
+    padding-left: 27.5rem !important;
     width: 55.8rem;
   }
 
@@ -184,6 +184,9 @@
 
   &__swiper-slide {
     width: 55.8rem !important;
+    @include small-tablet {
+      height: auto !important;
+    }
   }
 
   /* .advantages__card-inner */
@@ -199,7 +202,7 @@
     height: 50.5rem;
     width: 36.4rem;
     @include small-tablet {
-      height: auto;
+      height: 100%;
       width: 55.8rem;
       padding: 4.8rem;
       border-radius: 4.8rem;

@@ -40,7 +40,7 @@ function init() {
   // Создание физического движка
   engine = Engine.create();
   world = engine.world;
-  world.gravity.y = window.innerWidth> 768 ?  3.5: 2;
+  world.gravity.y = window.innerWidth> 768 ?  3: 2;
   // Создание рендерера
   render = Render.create({
     element: containerImg,
@@ -56,7 +56,7 @@ function init() {
 
   // Создание границ сцены
   let roof = Bodies.rectangle(width / 2, 0, width, 10, { render: { fillStyle: 'transparent' }, isStatic: true });
-  let wallLeft = Bodies.rectangle(window.innerWidth> 768 ? (width / 2  ): 0, height / 2, 5, height, { render: { fillStyle: 'transparent' }, isStatic: true });
+  let wallLeft = Bodies.rectangle(window.innerWidth> 768 ? (width / 1.95 ): 0, height / 2, 10, height, { render: { fillStyle: 'transparent' }, isStatic: true });
   let wallRight = Bodies.rectangle(width , height / 2, 10, height, { render: { fillStyle: 'transparent' }, isStatic: true });
   let ground = Bodies.rectangle(width / 2 ,window.innerWidth> 768 ? height : height - 30 , width, 10, { render: { fillStyle: 'transparent' }, isStatic: true });
 

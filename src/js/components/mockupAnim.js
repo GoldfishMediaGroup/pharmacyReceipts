@@ -33,7 +33,10 @@ function mockupAnim() {
     }
   });
 
-  gsap.set(contentBox, {opacity: 0})
+  gsap.set(contentBox, {opacity: 0,  zIndex: -1,})
+
+
+
 
   main.to(columnWrapper, {
     transformOrigin: '30% 10%',
@@ -62,9 +65,11 @@ function mockupAnim() {
   }, 0);
 
   main.to(contentBox, {
-   opacity: 1
-   , duration: 7
-  }, 3);
+    opacity: 1,
+    delay: 20,
+    zIndex: 500,
+     duration: 7
+   }, 3);
 
 
 

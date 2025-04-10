@@ -17,11 +17,14 @@ import returnAnim from '../components/returnAnim';
 import swipers from '../components/swipers';
 import advantagesAnim from '../components/advantagesAnim';
 import howAnim from '../components/howAnim';
-import trustAnim from '../components/trustAnim';
-import mockupAnim from '../components/mockupAnim';
+// import trustAnim from '../components/trustAnim';
+// import mockupAnim from '../components/mockupAnim';
+import mockupAnim2 from '../components/mockupAnim2';
 import questionsTabs from '../components/questionsTabs';
 import scrollTopBtn from '../components/scrollTopBtn';
 import smoothScroll from '../components/smoothScroll';
+import partnersAmim from '../components/partnersAnim';
+import footer from '../components/footer';
 
 export const modules = {};
 
@@ -61,11 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     howAnim();
   } catch {}
+  // try {
+  //   trustAnim();
+  // } catch {}
+  // try {
+  //   // mockupAnim();
+  // } catch {}
   try {
-    trustAnim();
-  } catch {}
-  try {
-    mockupAnim();
+    mockupAnim2();
   } catch {}
   try {
     questionsTabs();
@@ -77,5 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (innerWidth > 767) {
       smoothScroll();
     }
+  } catch {}
+  try {
+    footer();
+  } catch {}
+  try {
+    partnersAmim();
   } catch {}
 });

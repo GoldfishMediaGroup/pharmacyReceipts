@@ -247,7 +247,8 @@
     &:not(:first-child) {
       margin-left: -1rem;
       @include small-tablet {
-        margin-left: -3.2rem;
+        // margin-left: -3.2rem;
+        margin-left: -1.6rem;
       }
     }
 

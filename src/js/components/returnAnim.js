@@ -5,17 +5,18 @@ function returnAnim() {
 
   const paralax = document.querySelector('.return');
   const paralaxInner = document.querySelector('.return__inner');
+  const paralaxVideo = document.querySelector('.return__video-box');
 
 
-    gsap.to(paralaxInner, {
+    gsap.to([paralaxInner,paralaxVideo], {
 
       y: window.innerWidth > 768 ? '55vh' : '15vh',
       ease: 'none',
       force3D: true,
       scrollTrigger: {
         trigger: paralax,
-        start:  'top',
-        end: 'bottom top',
+        start:   window.innerWidth > 768 ? '100%' : 'top',
+        end: window.innerWidth > 768 ? '200% top' : 'bottom top' ,
         scrub: 0,
         invalidateOnRefresh: !0,
       }

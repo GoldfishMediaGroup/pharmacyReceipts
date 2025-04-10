@@ -1,11 +1,11 @@
 import Lenis from '@studio-freight/lenis';
 
 import { gsap, ScrollTrigger, Draggable, MotionPathPlugin, ScrollToPlugin } from 'gsap/all';
-
+export let lenis;
 function smoothScroll() {
   gsap.registerPlugin(ScrollTrigger);
 
-  const lenis = new Lenis();
+  lenis = new Lenis();
   //   {
   //   smooth: true,
   //   duration: 0.5, // Длительность скролла

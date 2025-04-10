@@ -165,6 +165,7 @@ const popup = () => {
     open(selectorValue) {
       if (bodyLockStatus) {
         this.bodyLock = document.documentElement.classList.contains('lock') && !this.isOpen ? true : false;
+        
 
         if (selectorValue && typeof selectorValue === 'string' && selectorValue.trim() !== '') {
           this.targetOpen.selector = selectorValue;

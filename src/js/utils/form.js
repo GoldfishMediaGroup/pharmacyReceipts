@@ -9,8 +9,8 @@ const form = () => {
   nameValidate();
   phoneMask();
   telValidate();
-  mailValidate();
-  inputFile();
+  // mailValidate();
+
   function nameValidate() {
     const name = document.querySelectorAll('.input--name');
     name.forEach((item) => {
@@ -86,6 +86,44 @@ const form = () => {
       });
     });
   }
+
+  function setupFormListener(formSelector, submitButtonSelector) {
+    const form = document.querySelector(formSelector);
+    const submitButton = document.querySelector(submitButtonSelector);
+
+    const formElements = form.querySelectorAll('input[data-required], textarea[data-required]');
+
+    const formElementCheckbox = form.querySelectorAll('.popup__input-checkbox');
+    const formElementsParents = form.querySelectorAll('.input-group');
+
+    function updateSubmitButtonState() {
+      const isEmpty = Array.from(formElements).some((element) => {
+        return element.value.trim() === '';
+      });
+      const formError = Array.from(formElementsParents).some((element) => {
+        return element.classList.contains('_form-error');
+      });
+
+      const formErrorCheckbox = Array.from(formElementCheckbox).some((element) => {
+        return !element.checked;
+      });
+
+      if (isEmpty || formError || formErrorCheckbox) {
+        submitButton.setAttribute('disabled', 'disabled');
+      } else {
+        submitButton.removeAttribute('disabled');
+      }
+    }
+
+    formElements.forEach((element) => {
+      element.addEventListener('input', updateSubmitButtonState);
+    });
+
+    updateSubmitButtonState();
+  }
+
+  setupFormListener('.popup__form--application', '.popup__btn--application');
+  setupFormListener('.application__form', '.application__form-btn');
 };
 
 export default form;

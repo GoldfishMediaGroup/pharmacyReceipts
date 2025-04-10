@@ -3,30 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
+
+    <title>Чеки из аптеки</title>
   </head>
   <body>
-    <div class="wrapper">
-      <include src="./components/_header.html"></include>
-      <include src="./components/_popup.html"></include>
-      <!-- <main> -->
-      <include src="./components/_banner.html"></include>
-      <div class="background__section">
-        <include src="./components/_advantages.html"></include>
-        <include src="./components/_return.html"></include>
-      </div>
-      <include src="./components/_how.html"></include>
-      <include src="./components/_trust.html"></include>
-      <include src="./components/_mockup.html"></include>
-
-      <div class="background__section">
-        <include src="./components/_questions.html"></include>
-        <include src="./components/_contacts.html"></include>
-        <!-- </main> -->
-        <include src="./components/_footer.html"></include>
-      </div>
-      
-      <include src="./components/_scrollTop.html"></include>
+    <div class="root">
+      <h1>Чеки из аптеки</h1>
+      <h2>готовые страницы:</h2>
+      <ol>
+        <li>
+          <a href="./main.html">главная</a>
+        </li>
+        <li>
+          <a href="./partners.html">партнерам</a>
+        </li>
+      </ol>
     </div>
+    <style>
+      @charset "UTF-8";
+      @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+      * {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        width: 100%;
+        /* min-width: 32rem; */
+        background: #eeeef0;
+        color: #191817;
+        display: flex;
+        justify-content: center;
+      }
+      html {
+        font-size: 0.5208335vw;
+      }
+      body {
+        padding: 5rem 0;
+        font-family: 'Source Code Pro';
+        font-size: 100%;
+        line-height: 1;
+        font-size: 2.5rem;
+        user-select: none;
+      }
+      ul,
+      ol {
+        margin-bottom: 10rem;
+      }
+      ul li,
+      ol li {
+        font-size: 2.3rem;
+      }
+      li {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+      a {
+        text-decoration: none;
+      }
+      a {
+        color: #191817;
+        transition: color 0.5s ease;
+      }
+      a:visited {
+        text-decoration: none;
+        color: #191817;
+      }
+      a:hover {
+        color: #191817;
+        text-decoration: underline;
+      }
+      h1 {
+        margin-bottom: 5rem;
+        font-size: 5rem;
+        font-weight: 300;
+        text-align: center;
+      }
+      h2 {
+        margin-bottom: 2.5rem;
+        font-size: 2.5rem;
+        font-weight: 300;
+      }
+      .root {
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      @media (max-width: 48em) {
+        html {
+          font-size: 1.5625vw;
+        }
+      }
+    </style>
   </body>
 </html>

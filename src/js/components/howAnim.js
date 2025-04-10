@@ -16,17 +16,19 @@ function howAnim() {
   const contentBox = document.querySelector('.how__content-box-desktop');
   const contentBoxMob = document.querySelector('.how__content-box-mobile');
 
+  const section = document.querySelector('.how__anim-wrapper-desktop')
+
   frames.forEach((frame, i) => {
     gsap.set(frame, { z: i * zSpacing + zSpacing / 0.8, filter: 'blur(10px)' });
   });
 
-  const tl = gsap.timeline({
+  const tl = section && gsap.timeline({
     force3D: true,
     scrollTrigger: {
-      trigger: '.how__anim-wrapper-desktop',
+      trigger: section,
  
       start: 'top top',
-      end: '+=3000',
+      end: '+=4000',
       scrub: true,
       pin: true,
       pinSpacer: true,
@@ -61,11 +63,15 @@ function howAnim() {
           z: -500,
           opacity: 1,
           filter: 'blur(0px)',
-          rotationY: (i) => (i % 2 === 0 ? 10 : -10)
+          // rotationY: (i) => (i % 2 === 0 ? 10 : -10),
+          rotationY: (i) => (i === frames.length - 1 ? 0 : i % 2 === 0 ? 10 : -10),
+          x: (i) => (i === frames.length - 1 ? i % 2 === 0 ? '27%' : '-27%'  : '0'),
+     
         },
         '100%': {
           opacity: (i) => (i === frames.length - 1 ? 1 : 0),
-          z: (i) => (i === frames.length - 1 ? -500 : 1500)
+          z: (i) => (i === frames.length - 1 ? -500 : 1500),
+ 
         }
       },
       stagger: {

@@ -1,7 +1,13 @@
+
+
 .advantages {
   padding: 7.5rem 0 50rem;
   overflow: hidden;
   height: 148rem;
+
+  position: relative;
+  z-index: 5;
+
   @include small-tablet {
     height: 100%;
     padding: 7.5rem 0 0;
@@ -81,12 +87,15 @@
     // transform-origin: 50% 120%;
     // transform-origin: 50% 165.75%;
     // transform-origin: 50% 140%;
-    transform-origin: 50% 170%;
+    // transform-origin: 50% 160%;
+    transform-origin: 50% 140%;
     width: 100%;
     top: 12rem;
     left: 0;
     aspect-ratio: 1 / 1;
-    transform: rotate(-17deg);
+    // transform: rotate(-17deg);
+    transform: rotate(-15deg);
+    // cursor: none;
     @include small-tablet {
       // opacity: 0;
       // visibility: hidden;
@@ -96,13 +105,32 @@
     }
   }
 
+  &__card-wrapper-cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 9.9rem;
+    padding: 2rem 2.4rem;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 500;
+  }
+
+  &__card-wrapper-cursor-text {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
   /* .advantages__card-box */
 
   &__card-box {
     display: flex !important;
     justify-content: space-between;
     height: auto;
-    width: 150rem;
+    width: 182rem;
     transform-origin: 50% 100%;
     position: relative;
 
@@ -112,18 +140,15 @@
     &:nth-child(2) {
       position: absolute;
       transform: rotate(45deg);
-      top: 32%;
-      left: 89%;
-      top: 30%;
-      left: 73%;
+      top: 40%;
+      left: 88%;
     }
+
     &:nth-child(3) {
       position: absolute;
       transform: rotate(-45deg);
-      top: 32%;
-      top: 30%;
-      left: -79%;
-      left: -73%;
+      top: 34.5%;
+      left: -90.5%;
     }
   }
 
@@ -135,17 +160,21 @@
     //     transform: rotate(-25deg) translate(-20%, 25%);
     //     }
     &:nth-child(1) {
-      transform: rotate(-15deg) translate(-5%, 7%);
+      transform: rotate(-15deg) translate(-9%, 15%);
     }
     &:nth-child(2) {
-      transform: rotate(-5deg);
+      transform: rotate(-8deg) translate(-2%, 5%);
     }
     &:nth-child(3) {
-      transform: rotate(5deg);
+      transform: rotate(2deg) translate(2%, 4%);
       transform-origin: 0 100%;
     }
     &:nth-child(4) {
-      transform: rotate(15deg) translate(5%, 7%);
+      transform: rotate(12deg) translate(7%, 6%);
+      transform-origin: 0 100%;
+    }
+    &:nth-child(5) {
+      transform: rotate(20deg) translate(15%, 20%);
       transform-origin: 0 100%;
     }
   }
@@ -199,24 +228,25 @@
     gap: 1.6rem;
     background: $white;
     border-radius: 4rem;
-    height: 50.5rem;
+    // height: 50.5rem;
+    height: 45.7rem;
     width: 36.4rem;
     @include small-tablet {
       height: 100%;
       width: 55.8rem;
       padding: 4.8rem;
       border-radius: 4.8rem;
-      gap: 4.8rem;
+      // gap: 4.8rem;
+      gap: 4rem;
     }
   }
 
   /* .advantages__card-info-box */
-  
 
   &__card-info-box {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 4rem;
     flex-grow: 1;
     @include small-tablet {
       gap: 4rem;
@@ -268,8 +298,8 @@
       height: 0.8rem;
       border-radius: 50%;
       background-color: $purple;
-      margin-right: 0.8rem;
-      margin-left: 2.4rem;
+      margin-right: 0.6rem;
+      margin-left: 1.4rem;
       @include small-tablet {
         width: 1.6rem;
         height: 1.6rem;
@@ -290,7 +320,8 @@
       width: calc(100% + 9.6rem);
       margin: 0 -4.8rem;
       padding: 2rem 4.8rem 1.6rem;
-      font-size: 2.8rem;
+      // font-size: 2.8rem;
+      font-size: 2.4rem;
     }
   }
 

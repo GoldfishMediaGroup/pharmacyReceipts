@@ -1,0 +1,115 @@
+<section class="application">
+  <div class="application__container container">
+    <div class="application__inner">
+      <div class="application__content-box">
+        <div class="application__text-box">
+          <p class="application__title tl3">оставить заявку на сотрудничество</p>
+          <p class="application__desc txt20 txt20_light">Оставьте все свои данные и мы свяжемся с вами в ближайшее время</p>
+        </div>
+
+        <div class="application__img-cube">
+          <div class="application__img-cube-container">
+            <div class="application__img-cube-side application__img-cube-side--x">
+              <div class="application__img-cube-side-front">
+                <img src="./assets/images/newImages/qr1.png" alt="" />
+              </div>
+              <div class="application__img-cube-side-back">
+                <img src="./assets/images/newImages/qr1.png" alt="" />
+              </div>
+            </div>
+            <div class="application__img-cube-side application__img-cube-side--y">
+              <div class="application__img-cube-side-front">
+                <img src="./assets/images/newImages/qr2.png" alt="" />
+              </div>
+              <div class="application__img-cube-side-back">
+                <img src="./assets/images/newImages/qr2.png" alt="" />
+              </div>
+            </div>
+            <div class="application__img-cube-side application__img-cube-side--z">
+              <div class="application__img-cube-side-front">
+                <img src="./assets/images/newImages/qr3.png" alt="" />
+              </div>
+              <div class="application__img-cube-side-back">
+                <img src="./assets/images/newImages/qr3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form data-popup-message="#popup__success" data-dev action="" class="application__form">
+        <div class="application__form-input-wrapper">
+          <div class="application__form-input-box txt16">
+            <label class="popup__label input-group">
+              <span class="form__input-wrapper">
+                <input
+                  class="input--name application__form-input"
+                  type="text"
+                  data-validate
+                  data-required="name"
+                  autocomplete="off"
+                  name="form[]"
+                  placeholder="ваше имя*"
+                />
+              </span>
+              <span class="error-span">Поле заполнено неверно</span>
+            </label>
+
+            <label class="popup__label input-group">
+              <span class="form__input-wrapper">
+                <input
+                  class="input--tel application__form-input phone-mask"
+                  type="text"
+                  data-validate
+                  data-required="tel"
+                  autocomplete="off"
+                  name="form[]"
+                  placeholder="телефон*"
+                />
+              </span>
+              <span class="error-span">Поле заполнено неверно</span>
+            </label>
+
+            <label class="popup__label input-group">
+              <span class="form__input-wrapper">
+                <input
+                  class="input--mail application__form-input"
+                  type="text"
+                  autocomplete="off"
+                  name="form[]"
+                  placeholder="корпоративный e-mail"
+                />
+              </span>
+              <span class="error-span">Поле заполнено неверно</span>
+            </label>
+
+            <label class="popup__label input-group">
+              <span class="form__input-wrapper">
+                <textarea class="input--textarea application__form-input" placeholder="комментарий"></textarea>
+                <span class="error-span"></span>
+              </span>
+            </label>
+          </div>
+          <div class="application__form-btn-box">
+            <p class="application__form-agreement-text">
+              Нажимая на кнопку “Отправить”, Вы соглашаетесь на <a href="#">обработку персональных данных</a> и
+              <a href="#">политику конфиденциальности</a>
+            </p>
+
+            <button type="submit" class="application__form-btn">
+              <p class="application__form-btn-text link-list__text txt18">отправить заявку</p>
+
+              <div class="application__form-btn-svg-box link-list__svg-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18.3137 5.99977C18.3137 5.44748 17.866 4.99977 17.3137 4.99977L8.31371 4.99977C7.76142 4.99977 7.31371 5.44748 7.31371 5.99977C7.31371 6.55205 7.76142 6.99977 8.31371 6.99977L16.3137 6.99977L16.3137 14.9998C16.3137 15.5521 16.7614 15.9998 17.3137 15.9998C17.866 15.9998 18.3137 15.5521 18.3137 14.9998L18.3137 5.99977ZM6.70711 18.0206L18.0208 6.70688L16.6066 5.29266L5.29289 16.6064L6.70711 18.0206Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

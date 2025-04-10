@@ -337,7 +337,7 @@ function swipers() {
       centeredSlides: true,
       speed: 1100,
       loop: true,
-      // allowTouchMove: false,
+      allowTouchMove: false,
       loopedSlides: 5,
       autoplay: {
         delay: 0,

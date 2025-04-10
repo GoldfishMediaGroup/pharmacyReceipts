@@ -329,17 +329,18 @@ function swipers() {
   };
 
   const mockupSwiper = () => {
-    const swiperEl = document.querySelector('.mockup__swiper-swiper');
-    const swiper = new Swiper(swiperEl, {
+  
+
+    const swiper = new Swiper('.mockup__swiper-swiper', {
       modules: [Autoplay, EffectCreativeMore],
       slidesPerView: 'auto',
       centeredSlides: true,
-      speed: 600,
+      speed: 1100,
       loop: true,
-      allowTouchMove: false,
+      // allowTouchMove: false,
       loopedSlides: 5,
       autoplay: {
-        delay: 1000,
+        delay: 0,
         disableOnInteraction: false
       },
       effect: 'creative',
@@ -360,7 +361,7 @@ function swipers() {
         }
       }
     });
-
+setTimeout(() => {    swiper.slideTo(3)}, 800)
 
 
     const swiperTitle = new Swiper('.mockup__swiper-title-swiper', {

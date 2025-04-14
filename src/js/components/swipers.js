@@ -179,7 +179,6 @@ function EffectCreativeMore({ swiper, extendParams, on }) {
 }
 
 function swipers() {
-
   const ribbonSwiperAdvantages = () => {
     // const swiperRibbon = new Swiper('.swiper-ribbon--advantages', {
     //   speed: 8000,
@@ -329,40 +328,71 @@ function swipers() {
   };
 
   const mockupSwiper = () => {
-  
+    const swiperEl = document.querySelector('.mockup__swiper-swiper')
 
-    const swiper = new Swiper('.mockup__swiper-swiper', {
-      modules: [Autoplay, EffectCreativeMore],
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      speed: 1100,
-      loop: true,
-      allowTouchMove: false,
-      loopedSlides: 5,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false
-      },
-      effect: 'creative',
-      creativeEffect: {
-        perspective: true,
-        limitProgress: 5,
-        progressMultiplierY: (progress) => {
-          const radius = 2.5;
-          return radius - Math.cos(((progress / 4) * Math.PI) / 2) * radius;
-        },
-        prev: {
-          translate: ['-85%', '85%', -0],
-          rotate: [0, 25, -5]
-        },
-        next: {
-          translate: ['85%', '85%', -0],
-          rotate: [0, -25, 5]
+    let swiper = null;
+
+    if (swiperEl) {
+      swiper = new Swiper(swiperEl, {
+        modules: [Autoplay, EffectCreativeMore],
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        speed: 600,
+        // speed: 1100,
+        loop: true,
+        allowTouchMove: false,
+        loopedSlides: 5,
+        // autoplay: {
+        //   delay: 0,
+        //   disableOnInteraction: false
+        // },
+        effect: 'creative',
+        creativeEffect: {
+          perspective: true,
+          limitProgress: 5,
+          progressMultiplierY: (progress) => {
+            const radius = 2.5;
+            return radius - Math.cos(((progress / 4) * Math.PI) / 2) * radius;
+          },
+          prev: {
+            translate: ['-85%', '85%', -0],
+            rotate: [0, 25, -5]
+          },
+          next: {
+            translate: ['85%', '85%', -0],
+            rotate: [0, -25, 5]
+          }
         }
-      }
-    });
-setTimeout(() => {    swiper.slideTo(3)}, 800)
+        // on: {
+        //   init: function () {
+        //     setTimeout(() => {
+        //       this.slideNext(); // безопасно
+        //     }, 800);
+        //   }
+        // }
+      });
+    }
 
+    // swiper &&
+    //   setTimeout(() => {
+    //     swiper.slideTo(3);
+    //   }, 800);
+
+    // setTimeout(() => {
+    //   if (swiperEl && swiperEl.swiper.slideTo) {
+    //     swiper.slideTo(3);
+    //   }
+    // }, 800); // небольшая задержка
+    try {
+      setTimeout(() => {
+        if (swiper && swiper.autoplay) {
+          swiper.params.autoplay.delay =1000;
+          // swiper.params.autoplay.delay = 0;
+          swiper.params.autoplay.disableOnInteraction = false;
+          swiper.autoplay.start(); // <-- важно!
+        }
+      }, 1000);
+    } catch (err) {}
 
     const swiperTitle = new Swiper('.mockup__swiper-title-swiper', {
       speed: 600,
@@ -373,7 +403,7 @@ setTimeout(() => {    swiper.slideTo(3)}, 800)
         crossFade: true
       },
       loop: true,
-      allowTouchMove: false,
+      allowTouchMove: false
       // autoplay: {
       //   delay: 1000,
       //   disableOnInteraction: false
@@ -389,13 +419,12 @@ setTimeout(() => {    swiper.slideTo(3)}, 800)
         crossFade: true
       },
       loop: true,
-      allowTouchMove: false,
+      allowTouchMove: false
       // autoplay: {
       //   delay: 1000,
       //   disableOnInteraction: false
       // }
     });
-
 
     swiper.on('slideChange', () => {
       const index = swiper.realIndex;

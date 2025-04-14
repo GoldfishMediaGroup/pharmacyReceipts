@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     returnAnim();
   } catch {}
-  try {
+
     swipers();
-  } catch {}
+
   try {
     advantagesAnim();
   } catch {}

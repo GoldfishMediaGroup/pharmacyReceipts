@@ -130,7 +130,7 @@
 
     & .partners__content-info-text {
       transform: rotate(-6.5deg) translateX(1.8rem);
- 
+
       font-family: 'ActayWide';
       font-weight: 700;
       font-size: 2.4rem;
@@ -214,7 +214,6 @@
     height: 21.7rem;
     // height: 19.7rem;
     // overflow: hidden;
-
     border-radius: 1.6rem;
     display: flex;
     align-items: center;
@@ -330,10 +329,11 @@
 
   &__anim-item-images {
     transform-style: preserve-3d;
-
+    will-change: transform;
     // transform: translate3d(0, 0, -10.85rem) rotateX(0) rotateZ(0) rotateY(0);
-    transform: translate3d(0, 0, 0rem) rotateX(var(--xr)) rotateZ(var(--zr)) rotateY(var(--yr));
+    transform: translate3d(0, 0, 0.85rem) rotateX(var(--xr)) rotateZ(var(--zr)) rotateY(var(--yr));
     backface-visibility: visible;
+
   }
 
   /* .partners__anim-item-face */
@@ -344,9 +344,13 @@
     justify-content: center;
     backface-visibility: visible;
     background-color: $white;
+    will-change: transform;
     overflow: hidden;
     padding: 1.7rem;
     & img {
+      width: 100%;
+      height: 100%;
+      will-change: transform;
       object-fit: scale-down;
     }
   }

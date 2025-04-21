@@ -181,6 +181,7 @@
   /* .footer__top-social-col */
 
   &__top-social-col {
+    width: 27rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -188,6 +189,7 @@
     align-items: flex-end;
     text-align: right;
     @include small-tablet {
+      width: 100%;
       align-items: flex-start;
       text-align: left;
     }

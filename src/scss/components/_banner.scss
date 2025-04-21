@@ -98,7 +98,8 @@
     gap: 1.6rem;
     left: 29.4rem;
     left: 36rem;
-    top: 41.8rem;
+    // top: 41.8rem;
+    top: 30rem;
     z-index: 10;
 
     @include small-tablet {
@@ -161,7 +162,7 @@
   &__social-box {
     position: absolute;
     bottom: 27.3rem;
-    left: 0;
+    right: 0;
 
     @include small-tablet {
       bottom: 2rem;
@@ -173,7 +174,8 @@
       background: url(./assets/images/newImages/bannerSocialSvg.svg) no-repeat top/cover;
       width: 12.4rem;
       height: 15.55rem;
-      left: 100%;
+      transform: scaleX(-1);
+      right: 100%;
       bottom: 70%;
       @include small-tablet {
         display: none;
@@ -278,16 +280,21 @@
   &__best-btn-box {
     position: absolute;
     z-index: 10;
+    // bottom: 26.3rem;
     bottom: 26.3rem;
-    right: 0;
-    &--reestr {
-      right: 17.8rem;
-      @include small-tablet {
-        right: 19.4rem;
-      }
-    }
+    left: 0;
+  
     @include small-tablet {
       bottom: 28.2rem;
+      left: auto;
+      right: 0;
+    }
+    &--reestr {
+      left: 17.8rem;
+      @include small-tablet {
+        left: auto;
+        right: 19.4rem;
+      }
     }
   }
 
@@ -398,8 +405,9 @@
     // left: -1.6rem;
     // top: 50%;
     // transform: translate(-100%, -50%);
-    right: 0;
-    bottom: calc(100% + 2.2rem);
+    left: 0;
+    // bottom: calc(100% + 2.2rem);
+    bottom: calc(100% + 1.6rem);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;

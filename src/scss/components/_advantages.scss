@@ -67,6 +67,7 @@
     width: 66.9rem;
     height: 92.2rem;
     margin-right: -7rem;
+    top: 0;
     & img {
       width: 100%;
       height: 100%;
@@ -94,7 +95,8 @@
     left: 0;
     aspect-ratio: 1 / 1;
     // transform: rotate(-17deg);
-    transform: rotate(-15deg);
+    // transform: rotate(-15deg);
+    transform: rotate(5deg);
     // cursor: none;
     @include small-tablet {
       // opacity: 0;

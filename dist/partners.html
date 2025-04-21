@@ -51,7 +51,7 @@
               <a href="#how" class="header__nav-link txt18 txt18_medium nav-link"> Как это работает </a>
             </li>
             <li class="header__nav-item">
-              <a href="#test" class="header__nav-link txt18 txt18_medium nav-link"> Категории </a>
+              <a href="#test" class="header__nav-link txt18 txt18_medium nav-link"> Товары </a>
             </li>
           </ul>
 
@@ -67,10 +67,10 @@
 
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#questions" class="header__nav-link txt18 txt18_medium nav-link"> Вопросы-ответы </a>
+              <a href="#questions" class="header__nav-link txt18 txt18_medium nav-link"> Скачать </a>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link txt18 txt18_medium"> Новости </a>
+              <a href="#" class="header__nav-link txt18 txt18_medium"> Вопросы-ответы </a>
             </li>
             <li class="header__nav-item">
               <a href="#contacts" class="header__nav-link txt18 txt18_medium nav-link"> Контакты </a>
@@ -276,12 +276,19 @@
         <div class="partners__content-text-box">
           <p class="partners__content-title tl1">партнерам</p>
           <p class="partners__content-desc txt20">
-            Партнёры кэшбэк-приложения <span> "Чеки из аптеки" — это ведущие фармацевтические сети и магазины,</span> которые
-            ценят долгосрочное и взаимовыгодное сотрудничество.
+            Партнёры кэшбэк-приложения <span> "Чеки из аптеки" — это ведущие фармацевтические производители,</span> которые ценят
+            долгосрочное и взаимовыгодное сотрудничество.
           </p>
         </div>
-        <div class="partners__content-img-box">
-          <img src="./assets/images/newImages/partnersImg.webp" alt="">
+        <div class="partners__content-info-wrapper">
+          <div class="partners__content-info-box partners__content-info-box--left">
+            <p class="partners__content-info-title">3+</p>
+            <p class="partners__content-info-text">лет</p>
+          </div>
+          <div class="partners__content-info-box partners__content-info-box--right">
+            <p class="partners__content-info-title">Средний срок работы </p>
+            <p class="partners__content-info-text">с клиентами</p>
+          </div>
         </div>
       </div>
       <div class="partners__anim-box">
@@ -500,41 +507,11 @@
         <section class="application">
   <div class="application__container container">
     <div class="application__inner">
-      <div class="application__content-box">
-        <div class="application__text-box">
-          <p class="application__title tl3">оставить заявку на сотрудничество</p>
-          <p class="application__desc txt20 txt20_light">Оставьте все свои данные и мы свяжемся с вами в ближайшее время</p>
-        </div>
-
-        <div class="application__img-cube">
-          <div class="application__img-cube-container">
-            <div class="application__img-cube-side application__img-cube-side--x">
-              <div class="application__img-cube-side-front">
-                <img src="./assets/images/newImages/qr1.webp" alt="">
-              </div>
-              <div class="application__img-cube-side-back">
-                <img src="./assets/images/newImages/qr1.webp" alt="">
-              </div>
-            </div>
-            <div class="application__img-cube-side application__img-cube-side--y">
-              <div class="application__img-cube-side-front">
-                <img src="./assets/images/newImages/qr2.webp" alt="">
-              </div>
-              <div class="application__img-cube-side-back">
-                <img src="./assets/images/newImages/qr2.webp" alt="">
-              </div>
-            </div>
-            <div class="application__img-cube-side application__img-cube-side--z">
-              <div class="application__img-cube-side-front">
-                <img src="./assets/images/newImages/qr3.webp" alt="">
-              </div>
-              <div class="application__img-cube-side-back">
-                <img src="./assets/images/newImages/qr3.webp" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="application__text-box">
+        <p class="application__title tl3">оставить заявку на сотрудничество</p>
+        <p class="application__desc txt20 txt20_light">Оставьте свои данные и мы свяжемся с вами в ближайшее время</p>
       </div>
+
       <form data-popup-message="#popup__success" data-dev="" action="" class="application__form">
         <div class="application__form-input-wrapper">
           <div class="application__form-input-box txt16">
@@ -584,6 +561,35 @@
           </div>
         </div>
       </form>
+
+      <div class="application__img-cube">
+        <div class="application__img-cube-container">
+          <div class="application__img-cube-side application__img-cube-side--x">
+            <div class="application__img-cube-side-front">
+              <img src="./assets/images/newImages/qr1.webp" alt="">
+            </div>
+            <div class="application__img-cube-side-back">
+              <img src="./assets/images/newImages/qr1.webp" alt="">
+            </div>
+          </div>
+          <div class="application__img-cube-side application__img-cube-side--y">
+            <div class="application__img-cube-side-front">
+              <img src="./assets/images/newImages/qr2.webp" alt="">
+            </div>
+            <div class="application__img-cube-side-back">
+              <img src="./assets/images/newImages/qr2.webp" alt="">
+            </div>
+          </div>
+          <div class="application__img-cube-side application__img-cube-side--z">
+            <div class="application__img-cube-side-front">
+              <img src="./assets/images/newImages/qr3.webp" alt="">
+            </div>
+            <div class="application__img-cube-side-back">
+              <img src="./assets/images/newImages/qr3.webp" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -609,6 +615,9 @@
         <nav class="footer__top-nav-col">
           <ul class="footer__nav-list">
             <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link txt18 txt18_medium nav-link">Главная </a>
+            </li>
+            <li class="footer__nav-item">
               <a href="#advantages" class="footer__nav-link txt18 txt18_medium nav-link"> Преимущества </a>
             </li>
             <li class="footer__nav-item">
@@ -617,38 +626,23 @@
             <li class="footer__nav-item">
               <a href="#how" class="footer__nav-link txt18 txt18_medium nav-link"> Как это работает </a>
             </li>
-            <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link txt18 txt18_medium nav-link"> Категории </a>
-            </li>
+    
           </ul>
           <ul class="footer__nav-list">
             <li class="footer__nav-item">
-              <a href="#trust" class="footer__nav-link txt18 txt18_medium nav-link">Партнерам </a>
+              <a href="#" class="footer__nav-link txt18 txt18_medium nav-link">Товары </a>
             </li>
             <li class="footer__nav-item">
-              <a href="#questions" class="footer__nav-link txt18 txt18_medium nav-link"> Вопросы-ответы </a>
+              <a href="#" class="footer__nav-link txt18 txt18_medium nav-link"> Скачать приложение</a>
             </li>
             <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link txt18 txt18_medium"> Новости </a>
+              <a href="#" class="footer__nav-link txt18 txt18_medium"> Вопросы ответы </a>
             </li>
             <li class="footer__nav-item">
               <a href="#contacts" class="footer__nav-link txt18 txt18_medium nav-link"> Контакты </a>
             </li>
           </ul>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link txt18 txt18_medium"> Инструкция по установке </a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link txt18 txt18_medium"> Функциональные характеристики </a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link txt18 txt18_medium"> Инструкция по эксплуатации </a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="#" class="footer__nav-link txt18 txt18_medium"> Описание процесса жизненного цикла </a>
-            </li>
-          </ul>
+
         </nav>
         <div class="footer__top-social-col">
           <div class="footer__top-social-text-box">

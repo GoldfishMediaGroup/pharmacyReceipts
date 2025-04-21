@@ -28,7 +28,7 @@ function howAnim() {
       trigger: section,
  
       start: 'top top',
-      end: '+=4000',
+      end: '+=4500',
       scrub: true,
       pin: true,
       pinSpacer: true,
@@ -58,7 +58,16 @@ function howAnim() {
       ease: 'linear',
       keyframes: {
         '0%': { filter: 'blur(10px)', rotationY: 0, opacity: 1 },
-        '65%': { filter: 'blur(0px)', opacity: 1 },
+        '35%': { filter: 'blur(0px)', opacity: 1 },
+        '40%': {
+          z: -500,
+          opacity: 1,
+          filter: 'blur(0px)',
+          // rotationY: (i) => (i % 2 === 0 ? 10 : -10),
+          rotationY: (i) => (i === frames.length - 1 ? 0 : i % 2 === 0 ? 10 : -10),
+          x: (i) => (i === frames.length - 1 ? i % 2 === 0 ? '27%' : '-27%'  : '0'),
+     
+        },
         '70%': {
           z: -500,
           opacity: 1,
@@ -75,7 +84,7 @@ function howAnim() {
         }
       },
       stagger: {
-        amount: 0.8
+        amount: 1
       }
     }
     // '-0.2s'

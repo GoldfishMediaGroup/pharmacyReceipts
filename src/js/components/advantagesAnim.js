@@ -12,10 +12,12 @@ function advantagesAnim() {
     force3D: true,
     scrollTrigger: {
       trigger: '.advantages',
-      start: '27% top',
-      end: 'bottom',
+      start: '37% top',
+      // end: 'bottom',
+      end: '+=1000',
+  
       // end: window.innerWidth > 768 ? '+=1000' : 'bottom',
-      scrub: true,
+      scrub: 3,
       pin: window.innerWidth > 768 ? true : false,
       // pinSpacer: true,
       invalidateOnRefresh: !0,
@@ -29,7 +31,8 @@ function advantagesAnim() {
 
   tl.to(cardWrapper, {
     // rotate: '+=30deg',
-    rotate: '+=20deg',
+    rotate: '-=20deg',
+    duration: 3,
     ease: 'ease-in'
   });
 

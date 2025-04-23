@@ -1,0 +1,44 @@
+.requisites {
+  padding-top: 21.2rem;
+  padding-bottom: 9rem;
+  /* .requisites__container */
+  @include small-tablet {
+    padding-top: 22.2rem;
+    padding-bottom: 5rem;
+  }
+  &__container {
+  }
+
+  /* .requisites__inner */
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    @include small-tablet {
+      gap: 1.6rem;
+    }
+  }
+
+  /* .requisites__title */
+
+  &__title {
+    @include small-tablet {
+      font-size: 6.4rem;
+    }
+  }
+
+  /* .requisites__info-text-box */
+
+  &__info-text-box {
+    width: 78.6rem;
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  /* .requisites__info-text */
+
+  &__info-text {
+  }
+}

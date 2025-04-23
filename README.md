@@ -1,3 +1,1 @@
 # pharmacyReceipts
-
-  // "swiper": "^11.0.5",

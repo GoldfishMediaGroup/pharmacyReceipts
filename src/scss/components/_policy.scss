@@ -1,0 +1,55 @@
+.policy {
+  /* .policy__container */
+  padding-top: 21.2rem;
+  padding-bottom: 20rem;
+  /* .requisites__container */
+  @include small-tablet {
+    padding-top: 22.2rem;
+    padding-bottom: 5rem;
+  }
+  &__container {
+  }
+
+  /* .policy__inner */
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+  }
+
+  /* .policy__block */
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    @include small-tablet {
+      gap: 1.6rem;
+    }
+  }
+
+  /* .policy__title */
+
+  &__title {
+    width: 122.4rem;
+    @include small-tablet {
+      width: 100%;
+
+      font-size: 6.4rem;
+    }
+  }
+
+  /* .policy__text */
+
+  &__text {
+    width: 92.2rem;
+    & a {
+
+      text-decoration: underline;
+    }
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+}

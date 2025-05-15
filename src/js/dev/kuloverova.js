@@ -25,6 +25,7 @@ import scrollTopBtn from '../components/scrollTopBtn';
 import smoothScroll from '../components/smoothScroll';
 import partnersAmim from '../components/partnersAnim';
 import footer from '../components/footer';
+import footerModalBtn from '../components/footerModalBtn';
 
 export const modules = {};
 
@@ -89,5 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch {}
   try {
     partnersAmim();
+  } catch {}
+  try {
+    footerModalBtn();
   } catch {}
 });

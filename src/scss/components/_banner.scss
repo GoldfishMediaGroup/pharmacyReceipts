@@ -410,10 +410,14 @@
     bottom: calc(100% + 1.6rem);
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+    // pointer-events: none;
     transition: opacity 0.5s, visibility 0.5s;
     @include small-tablet {
       display: none;
+    }
+        &:hover {
+      opacity: 1;
+      visibility: visible;
     }
   }
 

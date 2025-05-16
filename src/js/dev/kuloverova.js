@@ -29,6 +29,7 @@ import footerModalBtn from '../components/footerModalBtn';
 
 export const modules = {};
 
+
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 

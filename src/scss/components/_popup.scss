@@ -431,4 +431,98 @@ body::before {
       }
     }
   }
+
+  &--social {
+    & .popup__wrapper {
+    }
+
+    & .popup__content {
+    }
+
+    & .popup__body {
+      min-width: 117.4rem;
+      padding: 10.3rem 13rem 6rem;
+      @include small-tablet {
+        width: 71.8rem;
+        min-width: auto;
+        border-radius: 4rem;
+        padding: 3rem 4rem 5rem;
+      }
+    }
+
+    & .popup__body-close-btn {
+    }
+
+    & .popup__body-content-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3.2rem;
+      width: 91.5rem;
+
+      @include small-tablet {
+        // gap: 4.8rem;
+        width: 100%;
+        gap: 4.8rem;
+      }
+    }
+
+    & .popup__body-content-title-box {
+    }
+
+    & .popup__body-content-title {
+      font-family: 'ActayWide';
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: $purple;
+      text-align: center;
+      & br {
+        display: none;
+      }
+      @include small-tablet {
+        & br {
+          display: block;
+        }
+      }
+    }
+
+    & .popup__social-box {
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      background: #f5f5f5;
+      @include small-tablet {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+      }
+    }
+
+    & .popup__social-text-box {
+    }
+
+    & .popup__social-text {
+      color: $black;
+      @include small-tablet {
+        text-align: center;
+      }
+    }
+
+    & .popup__social-app-list {
+      border-left: 0.1rem solid $light-grew;
+      @include small-tablet {
+        border-left: none;
+      }
+    }
+
+    & .popup__social-app {
+      backdrop-filter: blur(46px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(56, 51, 73, 0.15);
+    }
+
+    & .popup__social-app-img-box {
+    }
+  }
 }

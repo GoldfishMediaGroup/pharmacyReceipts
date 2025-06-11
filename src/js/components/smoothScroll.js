@@ -24,8 +24,8 @@ function smoothScroll() {
   // Function to initialize Lenis
   function initializeLenis() {
     let lenis = new Lenis({
-      duration: 7,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 6,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(4, -10 * t)),
       direction: 'vertical',
       gestureDirection: 'vertical',
       smooth: true,

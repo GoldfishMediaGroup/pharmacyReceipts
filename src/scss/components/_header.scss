@@ -233,7 +233,9 @@
     padding: 2.8rem 3.2rem;
     border-radius: 2rem;
     position: relative;
+
     @include small-tablet {
+
       flex-direction: column;
       gap: 5.6rem;
       max-height: 59rem;

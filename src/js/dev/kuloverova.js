@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTopBtn();
   } catch {}
   try {
-    if (innerWidth > 767) {
+    // if (innerWidth > 767) {
       smoothScroll();
-    }
+    // }
   } catch {}
   try {
     footer();

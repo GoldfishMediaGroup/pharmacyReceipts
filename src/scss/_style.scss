@@ -34,8 +34,8 @@ $basic-gradient: linear-gradient(209deg, #ff7ca0 0%, #c065c3 87.36%);
   }
 }
 
-
 body {
+  // transition-behavior: allow-discrete;
   // background: $basic-gradient, url(./assets/images/bodyLine.png) repeat-y top/cover;
   // background: $basic-gradient;
   // background: $basic-gradient, url(./assets/images/bodyLine.png) ;
@@ -49,8 +49,15 @@ body {
   //   width: 100%;
   //   height: 100%;
   //    background: url(./assets/images/bodyLine.png) ;
+  //
+  // &.no-scroll {
+  //   height: 100vh;
+  //   height: 100dvh;
+  //   overflow: hidden !important;
+  //   touch-action: none !important;
+  //   position: fixed;
+  //   width: 100vw;
   // }
-
   .lock & {
     overflow: hidden;
     touch-action: none;
@@ -59,6 +66,9 @@ body {
     min-height: 100vh;
     overflow: hidden !important;
     touch-action: none !important;
+  }
+  @include small-tablet {
+    // -webkit-overflow-scrolling: touch;
   }
 }
 

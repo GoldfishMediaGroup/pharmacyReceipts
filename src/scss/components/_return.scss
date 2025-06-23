@@ -217,7 +217,8 @@
   &__info-title {
     width: 84rem;
     margin-left: -26.6rem;
-    text-indent: 26.6rem;
+    // text-indent: 26.6rem;
+    text-align: right;
     @include small-tablet {
       margin-left: 0;
       text-indent: 0;

@@ -14,9 +14,7 @@ function bannerBestBtn() {
         repeat: -1
       });
     });
-  });
-  btns.forEach((btn) => {
-    const rotateText = btn.querySelector('.banner__best-btn-svg-box-rotate');
+
     btn.addEventListener('mouseleave', function () {
       gsap.to(rotateText, {
         rotation: gsap.getProperty(rotateText, 'rotation'),

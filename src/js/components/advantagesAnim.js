@@ -12,7 +12,7 @@ function advantagesAnim() {
     force3D: true,
     scrollTrigger: {
       trigger: '.advantages',
-      start: '37% top',
+      start: '55% center',
       // end: 'bottom',
       end: '+=1000',
   
@@ -24,7 +24,8 @@ function advantagesAnim() {
       anticipatePin: 0,
       // anticipatePin: 1,
       pinType: 'fixed',
-      immediatelyRender: false
+      immediatelyRender: false,
+      // markers: true,
     },
     ease: 'power2.inOut'
   });

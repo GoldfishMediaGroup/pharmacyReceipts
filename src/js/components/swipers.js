@@ -313,9 +313,9 @@ function swipers() {
       speed: 800,
       slidesPerView: '1',
       effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
+      // fadeEffect: {
+      //   crossFade: true
+      // },
       grabCursor: true,
       spaceBetween: rem(3.2),
       loop: true,

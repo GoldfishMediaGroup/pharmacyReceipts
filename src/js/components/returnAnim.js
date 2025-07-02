@@ -15,10 +15,11 @@ function returnAnim() {
       force3D: true,
       scrollTrigger: {
         trigger: paralax,
-        start:   window.innerWidth > 768 ? '100%' : 'top',
-        end: window.innerWidth > 768 ? '200% top' : 'bottom top' ,
+        start:   window.innerWidth > 768 ? '115%' : 'top',
+        end: window.innerWidth > 768 ? '300% top' : 'bottom top' ,
         scrub: 0,
         invalidateOnRefresh: !0,
+        // markers: true,
       }
     });
 

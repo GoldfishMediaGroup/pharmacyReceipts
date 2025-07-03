@@ -23,7 +23,7 @@ function returnAnim() {
       }
     });
 
-
+console.log(window.innerHeight);
 }
 
 export default returnAnim;

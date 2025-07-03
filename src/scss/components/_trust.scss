@@ -131,7 +131,7 @@
   /* .trust__desc */
 
   &__desc {
-    & span {
+    & span, b {
       font-weight: 700;
     }
     @include small-tablet {

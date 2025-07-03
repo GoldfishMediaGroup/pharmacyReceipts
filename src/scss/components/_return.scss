@@ -9,7 +9,7 @@
     height: auto;
     // padding-top: 12rem;
     margin-top: 12rem;
-    background: #D46CB8;
+    background: #d46cb8;
   }
 
   /* .return__container */
@@ -101,10 +101,10 @@
       height: 100%;
       object-fit: cover;
       @include small-tablet {
-        scale: 1.36;
+        // scale: 1.36;
         margin-left: 4rem;
-        transform-origin: center;
-
+        width: 160%;
+        height: 160%;
       }
     }
     @include small-tablet {
@@ -115,9 +115,9 @@
       margin-left: -1.6rem;
       margin-right: -1.6rem;
       overflow: hidden;
-              display: flex;
-        align-items:center;
-        justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -243,7 +243,8 @@
   /* .return__info-desc */
 
   &__info-desc {
-    & span, & b {
+    & span,
+    & b {
       font-weight: 700;
     }
     @include small-tablet {

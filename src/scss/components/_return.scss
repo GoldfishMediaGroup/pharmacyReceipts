@@ -9,6 +9,7 @@
     height: auto;
     // padding-top: 12rem;
     margin-top: 12rem;
+    background: #D46CB8;
   }
 
   /* .return__container */
@@ -69,7 +70,8 @@
       padding-top: 4rem;
       padding-bottom: 12rem;
 
-      gap: 8rem;
+      // gap: 8rem;
+      gap: 0rem;
     }
   }
 
@@ -77,6 +79,11 @@
 
   &__img-wrapper {
     position: relative;
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
 
   /* .return__img-box */
@@ -96,6 +103,8 @@
       @include small-tablet {
         scale: 1.36;
         margin-left: 4rem;
+        transform-origin: center;
+
       }
     }
     @include small-tablet {
@@ -106,6 +115,9 @@
       margin-left: -1.6rem;
       margin-right: -1.6rem;
       overflow: hidden;
+              display: flex;
+        align-items:center;
+        justify-content: center;
     }
   }
 

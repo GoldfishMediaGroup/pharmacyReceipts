@@ -231,7 +231,7 @@
   /* .return__info-desc */
 
   &__info-desc {
-    & span, b {
+    & span, & b {
       font-weight: 700;
     }
     @include small-tablet {

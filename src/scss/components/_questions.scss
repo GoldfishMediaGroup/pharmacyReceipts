@@ -150,7 +150,7 @@
   /* .questions__content-info-text */
 
   &__content-info-text {
-    & span, b {
+    & span, & b {
       font-weight: 700;
     }
   }

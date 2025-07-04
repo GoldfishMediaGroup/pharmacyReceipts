@@ -20,6 +20,9 @@
 
       @media (max-width: 48em) {
         background: url(./assets/images/bodyLineMob.png) repeat-y top/cover;
+        min-height: 100vh;
+        min-height: 100dvh;
+        position: relative;
       }
     }
   }

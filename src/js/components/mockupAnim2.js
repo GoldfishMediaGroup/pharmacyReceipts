@@ -22,7 +22,8 @@ function mockupAnim2() {
     scrollTrigger: {
       trigger: inner,
       start: 'top',
-      end: '+=2000',
+      // end: '+=2000',
+      end: window.innerWidth > 768 ? '+=2000' : '+=800',
       scrub: true,
       pin: true,
       pinSpacer: true,

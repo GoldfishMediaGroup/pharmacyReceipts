@@ -5,27 +5,33 @@ export let lenis;
 function smoothScroll() {
   gsap.registerPlugin(ScrollTrigger);
 
-  lenis = new Lenis(
-    {
-    smooth: true,
+  lenis = new Lenis({
+    // smooth: true,
     duration: 1, // Длительность скролла
     easing: (t) => t, // Функция easing для плавности
     direction: 'vertical', // Вертикальный или горизонтальный скролл
-     gestureDirection: 'vertical',
-      smooth: true,
-      smoothTouch: true,
-      syncTouch: true,
-      syncTouchLerp: 0.015,
-      touchInertiaMultiplier: 18,
-      infinite: false,
-      autoResize: true,
-  })
+    gestureDirection: 'vertical',
+    smooth: true,
+    smoothTouch: true,
+    syncTouch: true,
+    syncTouchLerp: 0.075,
+    touchInertiaMultiplier: 15,
+    infinite: false,
+    autoResize: true
+  });
 
   lenis.on('scroll', ScrollTrigger.update);
 
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
+  // gsap.ticker.add((time) => {
+  //   lenis.raf(time * 1000);
+  // });
+  // gsap.ticker.lagSmoothing(0);
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
   gsap.ticker.lagSmoothing(0);
 
   // Function to initialize Lenis

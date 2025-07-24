@@ -89,7 +89,10 @@ const form = () => {
 
   function setupFormListener(formSelector, submitButtonSelector) {
     const form = document.querySelector(formSelector);
-    const submitButton = document.querySelector(submitButtonSelector);
+
+    if (!form) return;
+
+    const submitButton = form.querySelector(submitButtonSelector);
 
     const formElements = form.querySelectorAll('input[data-required], textarea[data-required]');
 
@@ -124,6 +127,8 @@ const form = () => {
 
   setupFormListener('.popup__form--application', '.popup__btn--application');
   setupFormListener('.application__form', '.application__form-btn');
+  setupFormListener('.questions__form--tabs', '.questions__form-btn--tabs');
+  setupFormListener('.questions__form--accordion', '.questions__form-btn--accordion');
 };
 
 export default form;

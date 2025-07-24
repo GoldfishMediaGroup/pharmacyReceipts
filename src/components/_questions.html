@@ -153,6 +153,90 @@
               </p>
             </div>
           </div>
+
+          <div class="questions__content-info-box">
+            <div class="questions__content-info-head">
+              <p class="tl4">Сообщить о нарущениях в области законодательства о ККТ</p>
+              <p class="txt20 txt20_light">
+                С 1 июля 2017 года кассы во всех магазинах выдают чеки нового образца, которые содержат QR-код. Если Вам не выдали
+                чек или выдали чек не соответствующий законодательству РФ, сообщите нам.
+              </p>
+            </div>
+            <form data-popup-message="#popup__success" data-dev action="" class="questions__form questions__form--tabs">
+              <div class="questions__form-input-wrapper">
+                <div class="questions__form-input-box txt16">
+                  <label class="popup__label input-group">
+                    <span class="form__input-wrapper">
+                      <input
+                        class="input--name questions__form-input"
+                        type="text"
+                        data-validate
+                        data-required="name"
+                        autocomplete="off"
+                        name="form[]"
+                        placeholder="ваше имя*"
+                      />
+                    </span>
+                    <span class="error-span">Поле заполнено неверно</span>
+                  </label>
+
+                  <label class="popup__label input-group">
+                    <span class="form__input-wrapper">
+                      <input
+                        class="input--tel questions__form-input phone-mask"
+                        type="text"
+                        data-validate
+                        data-required="tel"
+                        autocomplete="off"
+                        name="form[]"
+                        placeholder="телефон*"
+                      />
+                    </span>
+                    <span class="error-span">Поле заполнено неверно</span>
+                  </label>
+
+                  <label class="popup__label input-group">
+                    <span class="form__input-wrapper">
+                      <input
+                        class="input--mail questions__form-input"
+                        type="text"
+                        autocomplete="off"
+                        name="form[]"
+                        placeholder="корпоративный e-mail"
+                      />
+                    </span>
+                    <span class="error-span">Поле заполнено неверно</span>
+                  </label>
+
+                  <label class="popup__label input-group">
+                    <span class="form__input-wrapper">
+                      <textarea class="input--textarea questions__form-input" placeholder="комментарий"></textarea>
+                      <span class="error-span"></span>
+                    </span>
+                  </label>
+                </div>
+                <div class="questions__form-btn-box">
+                  <p class="questions__form-agreement-text">
+                    Нажимая на кнопку “Отправить”, Вы соглашаетесь на <a href="#">обработку персональных данных</a> и
+                    <a href="#">политику конфиденциальности</a>
+                  </p>
+
+                  <button type="submit" class="questions__form-btn questions__form-btn--tabs">
+                    <p class="questions__form-btn-text link-list__text txt18">отправить заявку</p>
+
+                    <div class="questions__form-btn-svg-box link-list__svg-box">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M18.3137 5.99977C18.3137 5.44748 17.866 4.99977 17.3137 4.99977L8.31371 4.99977C7.76142 4.99977 7.31371 5.44748 7.31371 5.99977C7.31371 6.55205 7.76142 6.99977 8.31371 6.99977L16.3137 6.99977L16.3137 14.9998C16.3137 15.5521 16.7614 15.9998 17.3137 15.9998C17.866 15.9998 18.3137 15.5521 18.3137 14.9998L18.3137 5.99977ZM6.70711 18.0206L18.0208 6.70688L16.6066 5.29266L5.29289 16.6064L6.70711 18.0206Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
         <div class="questions__content-tab-wrapper" data-lenis-prevent="true">
           <div class="questions__content-tab-box isActive">
@@ -253,11 +337,24 @@
               </svg>
             </div>
           </div>
+          <div class="questions__content-tab-box">
+            <p class="questions__content-tab-text tl4">Что делать если мне не выдали чек?</p>
+            <div class="questions__content-tab-svg-box">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 7.8125L11.7163 16.6626C11.7853 16.7334 11.8681 16.7897 11.9599 16.8281C12.0516 16.8666 12.1503 16.8864 12.25 16.8864C12.3497 16.8864 12.4484 16.8666 12.5401 16.8281C12.6319 16.7897 12.7147 16.7334 12.7837 16.6626L22 7.8125"
+                  stroke="white"
+                  stroke-width="2.78571"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
       <div class="questions__accordion-box">
         <div class="questions__accordion">
-
           <div class="questions__accordion-item">
             <div class="questions__accordion-item-header">
               <p class="questions__accordion-title tl4">Чеки из Аптеки</p>
@@ -462,6 +559,107 @@
             </div>
           </div>
 
+          <div class="questions__accordion-item">
+            <div class="questions__accordion-item-header">
+              <p class="questions__accordion-title tl4">Что делать если мне не выдали чек?</p>
+              <div class="questions__accordion-svg-box">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18.8852 6L10.9047 13.8027C10.845 13.8651 10.7733 13.9147 10.6938 13.9486C10.6144 13.9825 10.529 14 10.4426 14C10.3562 14 10.2708 13.9825 10.1914 13.9486C10.1119 13.9147 10.0402 13.8651 9.98048 13.8027L2.00001 6"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="questions__accordion-item-body">
+              <div class="questions__accordion-item-body-inner">
+                <div class="questions__content-info-head">
+                  <p class="tl4">Сообщить о нарущениях в области законодательства о ККТ</p>
+                  <p class="txt20 txt20_light">
+                    С 1 июля 2017 года кассы во всех магазинах выдают чеки нового образца, которые содержат QR-код. Если Вам не
+                    выдали чек или выдали чек не соответствующий законодательству РФ, сообщите нам.
+                  </p>
+                </div>
+                <form data-popup-message="#popup__success" data-dev action="" class="questions__form questions__form--accordion">
+                  <div class="questions__form-input-wrapper">
+                    <div class="questions__form-input-box txt16">
+                      <label class="popup__label input-group">
+                        <span class="form__input-wrapper">
+                          <input
+                            class="input--name questions__form-input"
+                            type="text"
+                            data-validate
+                            data-required="name"
+                            autocomplete="off"
+                            name="form[]"
+                            placeholder="ваше имя*"
+                          />
+                        </span>
+                        <span class="error-span">Поле заполнено неверно</span>
+                      </label>
+
+                      <label class="popup__label input-group">
+                        <span class="form__input-wrapper">
+                          <input
+                            class="input--tel questions__form-input phone-mask"
+                            type="text"
+                            data-validate
+                            data-required="tel"
+                            autocomplete="off"
+                            name="form[]"
+                            placeholder="телефон*"
+                          />
+                        </span>
+                        <span class="error-span">Поле заполнено неверно</span>
+                      </label>
+
+                      <label class="popup__label input-group">
+                        <span class="form__input-wrapper">
+                          <input
+                            class="input--mail questions__form-input"
+                            type="text"
+                            autocomplete="off"
+                            name="form[]"
+                            placeholder="корпоративный e-mail"
+                          />
+                        </span>
+                        <span class="error-span">Поле заполнено неверно</span>
+                      </label>
+
+                      <label class="popup__label input-group">
+                        <span class="form__input-wrapper">
+                          <textarea class="input--textarea questions__form-input" placeholder="комментарий"></textarea>
+                          <span class="error-span"></span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="questions__form-btn-box">
+                      <p class="questions__form-agreement-text">
+                        Нажимая на кнопку “Отправить”, Вы соглашаетесь на <a href="#">обработку персональных данных</a> и
+                        <a href="#">политику конфиденциальности</a>
+                      </p>
+
+                      <button type="submit" class="questions__form-btn questions__form-btn--accordion">
+                        <p class="questions__form-btn-text link-list__text txt18">отправить заявку</p>
+
+                        <div class="questions__form-btn-svg-box link-list__svg-box">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M18.3137 5.99977C18.3137 5.44748 17.866 4.99977 17.3137 4.99977L8.31371 4.99977C7.76142 4.99977 7.31371 5.44748 7.31371 5.99977C7.31371 6.55205 7.76142 6.99977 8.31371 6.99977L16.3137 6.99977L16.3137 14.9998C16.3137 15.5521 16.7614 15.9998 17.3137 15.9998C17.866 15.9998 18.3137 15.5521 18.3137 14.9998L18.3137 5.99977ZM6.70711 18.0206L18.0208 6.70688L16.6066 5.29266L5.29289 16.6064L6.70711 18.0206Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

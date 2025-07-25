@@ -99,9 +99,9 @@ export let formValidate = {
   validateInput(formRequiredItem) {
     let error = 0;
     if (formRequiredItem.dataset.required === 'email') {
-      let isBlock = formRequiredItem.dataset.block === 'block';
+      let blockList =  formRequiredItem.dataset.blockList || false;
       formRequiredItem.value = formRequiredItem.value.replace(' ', '');
-      if (this.emailTest(formRequiredItem, isBlock)) {
+      if (this.emailTest(formRequiredItem, blockList)) {
         this.addError(formRequiredItem);
         error++;
       } else {
@@ -212,43 +212,20 @@ export let formValidate = {
   // emailTest(formRequiredItem) {
   //   return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
   // }
-  emailTest(formRequiredItem, block) {
+  emailTest(formRequiredItem, blockList) {
     const email = formRequiredItem.value.trim();
 
     // 1. Проверка на корректность email-формата
     const isValidFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*\.\w{2,8}$/.test(email);
     if (!isValidFormat) return true;
 
-    // 2. Чёрный список доменов
-    const blockedDomains = [
-      '@mail.ru',
-      '@yandex.ru',
-      '@gmail.com',
-      '@outlook.com',
-      '@yahoo.com',
-      '@hotmail.com',
-      '@live.com',
-      '@bk.ru',
-      '@inbox.ru',
-      '@list.ru',
-      '@zmail.ru',
-      '@newmail.ru',
-      '@hotmail.ru',
-      '@sendmail.ru',
-      '@rambler.ru',
-      '@id.ru',
-      '@go.ru',
-      '@ok.ru',
-      '@ru.ru',
-      '@male.ru',
-      '@female.ru'
-    ];
 
-    if (block) {
+
+    if (blockList.length) {
       // 3. Получаем домен из email-а
       const domain = email.substring(email.indexOf('@')).toLowerCase();
       // 4. Проверка, есть ли домен в списке
-      return blockedDomains.includes(domain);
+      return blockList.includes(domain);
     } else {
       return !isValidFormat;
     }

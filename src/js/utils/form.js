@@ -125,10 +125,10 @@ const form = () => {
     updateSubmitButtonState();
   }
 
-  setupFormListener('.popup__form--application', '.popup__btn--application');
-  setupFormListener('.application__form', '.application__form-btn');
-  setupFormListener('.questions__form--tabs', '.questions__form-btn--tabs');
-  setupFormListener('.questions__form--accordion', '.questions__form-btn--accordion');
+  // setupFormListener('.popup__form--application', '.popup__btn--application');
+  // setupFormListener('.application__form', '.application__form-btn');
+  // setupFormListener('.questions__form--tabs', '.questions__form-btn--tabs');
+  // setupFormListener('.questions__form--accordion', '.questions__form-btn--accordion');
 };
 
 export default form;

@@ -112,6 +112,9 @@ main {
   background: linear-gradient(263deg, #ff7ca0 0%, #c065c3 87.36%);
   position: relative;
   overflow: hidden;
+  & .pin-spacer {
+    margin: 0 !important;
+  }
 
   @media (max-width: 48em) {
     background: linear-gradient(270deg, #ff7ca0 0%, #c065c3 87.36%);

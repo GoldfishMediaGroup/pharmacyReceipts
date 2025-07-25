@@ -89,10 +89,7 @@ export let formValidate = {
     let formRequiredItems = form.querySelectorAll('*[data-required]');
     if (formRequiredItems.length) {
       formRequiredItems.forEach((formRequiredItem) => {
-        if (
-          (formRequiredItem.offsetParent !== null || formRequiredItem.tagName === 'SELECT') &&
-          !formRequiredItem.disabled
-        ) {
+        if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === 'SELECT') && !formRequiredItem.disabled) {
           error += this.validateInput(formRequiredItem);
         }
       });
@@ -102,8 +99,9 @@ export let formValidate = {
   validateInput(formRequiredItem) {
     let error = 0;
     if (formRequiredItem.dataset.required === 'email') {
+      let isBlock = formRequiredItem.dataset.block === 'block';
       formRequiredItem.value = formRequiredItem.value.replace(' ', '');
-      if (this.emailTest(formRequiredItem)) {
+      if (this.emailTest(formRequiredItem, isBlock)) {
         this.addError(formRequiredItem);
         error++;
       } else {
@@ -112,7 +110,6 @@ export let formValidate = {
     } else if (formRequiredItem.dataset.required === 'tel') {
       // formRequiredItem.value = formRequiredItem.value.replace(/[^0-9]/g, ''); // Оставить только цифры и символы +()
       if (!/^\+\d{1} \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(formRequiredItem.value)) {
-
         this.addError(formRequiredItem);
         error++;
       } else {
@@ -126,7 +123,7 @@ export let formValidate = {
       } else {
         this.removeError(formRequiredItem);
       }
-    }else if (formRequiredItem.dataset.required === 'dropdown') {
+    } else if (formRequiredItem.dataset.required === 'dropdown') {
       if (!formRequiredItem.classList.contains('filled')) {
         this.addError(formRequiredItem);
         error++;
@@ -181,9 +178,7 @@ export let formValidate = {
       error.classList.remove('active');
     }
     if (formRequiredItem.parentElement.querySelector('.form__error')) {
-      formRequiredItem.parentElement.removeChild(
-        formRequiredItem.parentElement.querySelector('.form__error')
-      );
+      formRequiredItem.parentElement.removeChild(formRequiredItem.parentElement.querySelector('.form__error'));
     }
   },
   formClean(form) {
@@ -214,8 +209,49 @@ export let formValidate = {
       // }
     }, 0);
   },
-  emailTest(formRequiredItem) {
-    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
+  // emailTest(formRequiredItem) {
+  //   return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
+  // }
+  emailTest(formRequiredItem, block) {
+    const email = formRequiredItem.value.trim();
+
+    // 1. Проверка на корректность email-формата
+    const isValidFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*\.\w{2,8}$/.test(email);
+    if (!isValidFormat) return true;
+
+    // 2. Чёрный список доменов
+    const blockedDomains = [
+      '@mail.ru',
+      '@yandex.ru',
+      '@gmail.com',
+      '@outlook.com',
+      '@yahoo.com',
+      '@hotmail.com',
+      '@live.com',
+      '@bk.ru',
+      '@inbox.ru',
+      '@list.ru',
+      '@zmail.ru',
+      '@newmail.ru',
+      '@hotmail.ru',
+      '@sendmail.ru',
+      '@rambler.ru',
+      '@id.ru',
+      '@go.ru',
+      '@ok.ru',
+      '@ru.ru',
+      '@male.ru',
+      '@female.ru'
+    ];
+
+    if (block) {
+      // 3. Получаем домен из email-а
+      const domain = email.substring(email.indexOf('@')).toLowerCase();
+      // 4. Проверка, есть ли домен в списке
+      return blockedDomains.includes(domain);
+    } else {
+      return !isValidFormat;
+    }
   }
 };
 

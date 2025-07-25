@@ -19,7 +19,7 @@ function advantagesAnim() {
       // end: window.innerWidth > 768 ? '+=1000' : 'bottom',
       scrub: 3,
       pin: window.innerWidth > 768 ? true : false,
-      // pinSpacer: true,
+      // pinSpacer: false,
       invalidateOnRefresh: !0,
       anticipatePin: 0,
       // anticipatePin: 1,
